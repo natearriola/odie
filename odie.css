@@ -25,15 +25,15 @@ h6 {
   left: 40px;
   top: 22px;
   text-transform: uppercase;
-  color:#C05E00;
+  color: #c05e00;
   font-size: 16px;
   font-family: "Josefin Sans";
 }
 
-h3{
+h3 {
   font-family: "Josefin Sans";
   font-size: 16px;
-  color: #F1F3F5;
+  color: #f1f3f5;
   text-transform: uppercase;
   font-weight: 400;
   position: relative;
@@ -70,7 +70,6 @@ a:hover {
   cursor: pointer;
   z-index: 3;
   opacity: 0;
-
 }
 
 .menu-toggle span {
@@ -79,7 +78,7 @@ a:hover {
   height: 4px;
   margin-bottom: 5px;
   position: relative;
-  background:  #F1F3F5;
+  background: #f1f3f5;
   border-radius: 3px;
   z-index: 3;
   transform-origin: 4px 0px;
@@ -119,7 +118,7 @@ a:hover {
   transform-origin: 0% 0%;
   transform: translate(100%, 0%);
   transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
- z-index: 2;
+  z-index: 2;
 }
 .menu li {
   padding: 10px 0px;
@@ -131,27 +130,33 @@ a:hover {
   transform: none;
 }
 
+/***********************************
+********* General stylings**********
+***********************************/
+
+main {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
 
 /*************************************************
-MEET ODIE SECTION 
+ODIE SECTION 1
 *
 *************************************************/
 
-main{
-  
+.content-container {
   width: 100%;
-  background-image: url('images/Background.png');
+  background-image: url("images/Background.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   height: 100vh;
   padding: 0;
   margin: 0;
-
 }
 
-
-.MO-heading{
+.MO-heading {
   max-width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -159,41 +164,68 @@ main{
   padding: 30px;
 }
 
-ul{
- list-style: none;
- padding: 0;
- margin: 0;
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
-.About-heading li{
+.About-heading li {
   font-family: "Josefin Sans";
   font-size: 36px;
   font-weight: 700;
   text-transform: uppercase;
   color: transparent;
-  -webkit-text-stroke: #ffff .5px;
+  -webkit-text-stroke: #ffff 0.5px;
   letter-spacing: 3px;
 }
 
-.About-heading li:last-child{
+.About-heading li:last-child {
   color: #e0902f;
-  -webkit-text-stroke:0;
+  -webkit-text-stroke: 0;
 }
 
-
-main > p{
-  background-color: white;
-  padding : 20px;
-  
+.content-container > p {
+  background-color: #f0f4f4;
+  padding: 35px;
+  text-align: left;
 }
 
-p > span{
-  font-size:48px;
+p > span {
+  font-size: 48px;
 }
 
-.MO-heading > img{
- display: flex;
- justify-content: center;
- 
+.MO-heading > img {
+  display: flex;
+  justify-content: center;
 }
 
+/***********************************
+********* ODIE SECTION 2**********
+***********************************/
+
+.section-2 {
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.s2-heading {
+  width: 100%;
+  background-color: #e0902f;
+  height: 45%;
+}
+
+img {
+}
+
+.section-2 > p {
+  background-color: #f0f4f4;
+  text-align: left;
+  padding: 35px;
+}
+
+p > .Cap {
+  font-size: 48px;
+}
