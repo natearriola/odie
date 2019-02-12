@@ -140,6 +140,8 @@ main {
   width: 100%;
 }
 
+
+
 /*************************************************
 ODIE SECTION 1
 *
@@ -151,7 +153,6 @@ ODIE SECTION 1
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  height: 100vh;
   padding: 0;
   margin: 0;
 }
@@ -205,20 +206,37 @@ p > span {
 ***********************************/
 
 .section-2 {
-  height: 100vh;
+  height: 100%;
   padding: 0;
   margin: 0;
   width: 100%;
+  background-color: #3a5258;
+  display: flex; 
+ justify-content: center;
+ flex-direction: column;
+ align-items: center;
 }
+
 
 .s2-heading {
-  width: 100%;
-  background-color: #e0902f;
-  height: 45%;
+ 
+position: relative;
+top: 160px;
+font-family: "Josefin Sans";
+font-weight: 700;
+color:transparent;
+font-size: 36px;
+-webkit-text-stroke: 2px black;
+ 
+
 }
 
-img {
+.section-2 > img {
+ display: inline;
+  padding: 20px;
+max-width: 100%;
 }
+
 
 .section-2 > p {
   background-color: #f0f4f4;
@@ -228,4 +246,137 @@ img {
 
 p > .Cap {
   font-size: 48px;
+}
+
+
+
+/***********************************
+********* ODIE SECTION 3**********
+***********************************/
+
+.section-3 {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  background-color: #CD640D;
+  display: flex; 
+ justify-content: center;
+ flex-direction: column;
+ align-items: center;
+}
+
+
+.s3-heading {
+ 
+position: relative;
+top: 250px;
+font-family: "Josefin Sans";
+font-weight: 700;
+color:transparent;
+font-size: 36px;
+-webkit-text-stroke: 2px white;
+ 
+
+}
+
+.section-3 > img {
+ display: inline;
+  padding: 20px;
+max-width: 100%;
+}
+
+
+.section-3 > p {
+  background-color: #f0f4f4;
+  text-align: left;
+  padding: 35px;
+}
+
+p > .Cap {
+  font-size: 48px;
+}
+
+/***********************************
+********* ODIE SECTION 4**********
+***********************************/
+
+
+
+.section-4 {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  background-color: black;
+  display: flex; 
+ justify-content: center;
+ flex-direction: column;
+ align-items: center;
+}
+
+
+.s4-heading {
+ 
+position: relative;
+top: 200px;
+font-family: "Josefin Sans";
+font-weight: 700;
+color:transparent;
+font-size: 36px;
+-webkit-text-stroke: 2px #8cc3d8;
+ 
+
+}
+
+.section-4 > img {
+ display: inline;
+  padding: 20px;
+max-width: 100%;
+}
+
+
+.section-4 > p {
+  background-color: #f0f4f4;
+  text-align: left;
+  padding: 35px;
+}
+
+p > .Cap {
+  font-size: 48px;
+}
+
+
+/***********************************
+********* ODIE FOOTER**********
+***********************************/
+
+
+footer{
+  background-color: white;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 50px 50px;
+  grid-template-areas: 
+  '. top .'
+  'spotify tribute year';
+
+}
+
+.btt{
+  grid-area: top;
+}
+
+.spotify{
+  grid-area: spotify;
+}
+
+.tribute{
+  grid-area: tribute;
+  border: 2px solid black;
+}
+
+.year{
+  grid-area: year;
 }
