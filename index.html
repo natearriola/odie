@@ -8,8 +8,10 @@
     <title>ODIE</title>
   </head>
   <body>
-    <header>
-      <nav role="navigation" id="top">
+    <header id="top">
+
+      <!---- NAV MOBILE -->
+      <nav role="navigation">
         <div class="menu-toggle">
           <h6>Menu</h6>
           <input type="checkbox" />
@@ -17,14 +19,29 @@
           <span></span>
           <span></span>
           <ul class="menu">
-            <a href="#"> <li>Home</li></a>
-            <a href="#"> <li>About</li></a>
-            <a href="#"> <li>songs</li></a>
-            <a href="#"> <li>Thoughts</li></a>
-            <a href="#"> <li>Reflection</li></a>
+            <a href="#top"> <li>Home</li></a>
+            <a href="#About"> <li>About</li></a>
+            <a href="#sound"> <li>Sound</li></a>
+            <a href="#inspo"> <li>inspo</li></a>
+            <a href="#ref"> <li>Reflection</li></a>
           </ul>
         </div>
       </nav>
+<!--- NAV DESKTOP-->
+<nav role ="navigation" class="nav-d" style="width: 100%">
+  <ul class="menu-desktop">
+      <a href="#top"> <li>Home</li></a>
+      <a href="#About"> <li>About</li></a>
+      <a href="#sound"> <li>Sound</li></a>
+      <a href="#inspo"> <li>Inspo</li></a>
+      <a href="#ref"> <li>Reflection</li></a>
+  </ul>
+</nav>
+
+
+
+
+
       <h3>Scroll down</h3>
     </header>
     <main>
@@ -38,7 +55,7 @@
             <li>Odie</li>
             <li class="orange">Odie</li>
           </ul>
-          <img src="images/MO.png" alt="MEET ODIE" />
+          <img src="images/MO.png" alt="About"  />
         </div>
 
         <p>
@@ -62,8 +79,8 @@
           Ipsam, iusto tenetur?
         </p>
       </div>
-        <div class="section-2">
-          <div class="s2-heading">
+        <div class="section-2" id="sound">
+          <div class="s2-heading" >
                 SOUND
           </div>
           <img src="images/Odie 2(mobile).png" alt="ODIE PHOTO" />
@@ -100,9 +117,9 @@
             sed quis voluptas officiis!
           </p>
         </div>
-        <div class="section-3">
-            <div class="s3-heading">
-                  KING
+        <div class="section-3" id="inspo" >
+            <div class="s3-heading" >
+                  INSPO
             </div>
             <img src="images/Odie 3(mobile).png" alt="ODIE PHOTO" />
   
@@ -138,7 +155,7 @@
               sed quis voluptas officiis!
             </p>
           </div>
-          <div class="section-4">
+          <div class="section-4" id ="ref">
               <div class="s4-heading">
                     REFLECTION
               </div>

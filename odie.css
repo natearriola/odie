@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Josefin+Sans:400,700");
+@import url('https://fonts.googleapis.com/css?family=Bungee+Shade');
 
 * {
   padding: 0;
@@ -9,25 +10,32 @@ header {
   margin: 0;
   padding: 0;
   height: 100vh;
-  background-image: url("images/Odie.png");
+  background-image: url("images/mobilePhoto.jpg");
+    background-repeat: no-repeat;
   background-size: cover;
-  background-repeat: no-repeat;
+  background-position:  center;
   overflow-x: hidden;
+
 }
 
 nav {
   position: fixed;
   top: 0;
   z-index: 5;
+  color: #edf7f8;
+  height: 50px;
 }
 h6 {
   position: relative;
   left: 40px;
-  top: 22px;
+  top: 25px;
   text-transform: uppercase;
   color: #c05e00;
   font-size: 16px;
   font-family: "Josefin Sans";
+  
+
+
 }
 
 h3 {
@@ -40,6 +48,7 @@ h3 {
   top: 36rem;
   left: 8rem;
   z-index: 1;
+  
 }
 a {
   text-decoration: none;
@@ -130,6 +139,93 @@ a:hover {
   transform: none;
 }
 
+.menu-desktop{
+  display: none;
+}
+
+/************************
+* DESKTOP VERSION NAV 
+*************************/
+@media only screen and (min-width:600px){
+  .menu{
+    margin: -100px 0 0 350px;
+  }
+
+  
+ 
+}
+
+@media only screen and (min-width: 1100px){
+  .menu{
+   display: block;
+   position: absolute;
+  }
+  .menu-toggle{
+    display: none;
+  }
+ 
+  
+  header {
+    background-image: url("images/landingPhoto.jpg");
+    background-repeat: no-repeat;
+  background-size: cover;
+  background-position:  center;
+
+    
+  }
+
+  .nav-d{
+    position: fixed;
+    height: 50px;
+    background-color: #edf7f8;
+    opacity: .8;
+  }
+
+  .menu-desktop{
+  display: flex;
+  justify-content: flex-start;
+    list-style-type: none;
+    margin-left: 5px;
+    position: relative;
+    bottom: 15px;
+    border: 2px solid red;
+  
+    
+ 
+  }
+
+ .menu-desktop li{
+   font-family:'Josefin Sans';
+    color: #CD640D;
+    font-weight: 700;
+    text-transform: uppercase;
+  
+    
+  }
+
+.menu-desktop a{
+   
+  font-size: 16px;
+    text-align: center;
+    margin: 5px 15px 0 15px;
+   padding: 25px 15px 25px 5px;
+  
+
+  }
+
+  .menu-desktop li:hover{
+    -webkit-transform: rotateZ(10deg);
+        -ms-transform: rotateZ(10deg);
+        transform: rotateZ(10deg);
+        color: #0F090A;
+  }
+
+
+
+}
+
+
+
 /***********************************
 ********* General stylings**********
 ***********************************/
@@ -187,7 +283,7 @@ ul {
 }
 
 .content-container > p {
-  background-color: #f0f4f4;
+  background-color:  rgba(15,9, 10, .7 );
   padding: 35px;
   text-align: left;
 }
@@ -199,6 +295,10 @@ p > span {
 .MO-heading > img {
   display: flex;
   justify-content: center;
+}
+
+p{
+  color: #edf7f8;
 }
 
 /***********************************
