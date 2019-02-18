@@ -41,9 +41,9 @@ h6 {
 h3 {
   font-family: "Josefin Sans";
   font-size: 16px;
-  color: #f1f3f5;
+  color: #c05e00;
   text-transform: uppercase;
-  font-weight: 400;
+  font-weight: 700;
   position: relative;
   top: 36rem;
   left: 8rem;
@@ -176,9 +176,9 @@ a:hover {
 
   .nav-d{
     position: fixed;
-    height: 50px;
+    height: 40px;
     background-color: #edf7f8;
-    opacity: .8;
+    
   }
 
   .menu-desktop{
@@ -188,7 +188,7 @@ a:hover {
     margin-left: 5px;
     position: relative;
     bottom: 15px;
-    border: 2px solid red;
+  
   
     
  
@@ -197,7 +197,7 @@ a:hover {
  .menu-desktop li{
    font-family:'Josefin Sans';
     color: #CD640D;
-    font-weight: 700;
+    font-weight: 400;
     text-transform: uppercase;
   
     
@@ -236,7 +236,17 @@ main {
   width: 100%;
 }
 
+p{
+  color: #edf7f8;
+  overflow: auto;
+ 
 
+
+}
+
+p > span {
+  font-size: 48px;
+}
 
 /*************************************************
 ODIE SECTION 1
@@ -251,97 +261,86 @@ ODIE SECTION 1
   background-position: center;
   padding: 0;
   margin: 0;
+  height: 100vh;
 }
 
-.MO-heading {
-  max-width: 100%;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 20px;
-  padding: 30px;
-}
+.MO-heading{
 
-ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.About-heading li {
-  font-family: "Josefin Sans";
-  font-size: 36px;
-  font-weight: 700;
-  text-transform: uppercase;
-  color: transparent;
-  -webkit-text-stroke: #ffff 0.5px;
-  letter-spacing: 3px;
-}
-
-.About-heading li:last-child {
-  color: #e0902f;
-  -webkit-text-stroke: 0;
-}
-
-.content-container > p {
-  background-color:  rgba(15,9, 10, .7 );
-  padding: 35px;
-  text-align: left;
-}
-
-p > span {
-  font-size: 48px;
-}
-
-.MO-heading > img {
   display: flex;
   justify-content: center;
+  align-items: center;
+
 }
 
-p{
-  color: #edf7f8;
+
+.content-container > p {
+ border: 2px red solid;
+  text-align: left;
+  
 }
+
+
+
+.MO-heading > img {
+max-width: 100%;
+border: 2px solid red;
+ 
+}
+
+
+/************************
+* DESKTOP ODIE SECTION 1
+*************************/
+@media only screen and (min-width: 1100px){
+
+
+  .content-container, .content-container > p{
+    height: 100vh;
+  }
+
+  .MO-heading{
+    height: 30vh;
+  }
+}
+
+
 
 /***********************************
 ********* ODIE SECTION 2**********
 ***********************************/
 
 .section-2 {
-  height: 100%;
   padding: 0;
   margin: 0;
-  width: 100%;
+ width: 100%;
   background-color: #3a5258;
-  display: flex; 
- justify-content: center;
- flex-direction: column;
- align-items: center;
+ height: 100vh;
+ border: 2px solid red;
+ overflow-x: hidden;
+ overflow-y: scroll;
 }
 
 
-.s2-heading {
- 
-position: relative;
-top: 160px;
+.s2-heading > h3 {
 font-family: "Josefin Sans";
 font-weight: 700;
 color:transparent;
 font-size: 36px;
 -webkit-text-stroke: 2px black;
- 
+border: 2px solid red;
 
 }
 
-.section-2 > img {
- display: inline;
-  padding: 20px;
+.s2-heading > img {
 max-width: 100%;
 }
 
 
 .section-2 > p {
-  background-color: #f0f4f4;
   text-align: left;
-  padding: 35px;
+ 
+  border: 2px solid white;
+ 
 }
 
 p > .Cap {
@@ -355,7 +354,6 @@ p > .Cap {
 ***********************************/
 
 .section-3 {
-  height: 100%;
   padding: 0;
   margin: 0;
   width: 100%;
@@ -364,13 +362,11 @@ p > .Cap {
  justify-content: center;
  flex-direction: column;
  align-items: center;
+ height: 100vh;
 }
 
 
 .s3-heading {
- 
-position: relative;
-top: 250px;
 font-family: "Josefin Sans";
 font-weight: 700;
 color:transparent;
@@ -388,7 +384,7 @@ max-width: 100%;
 
 
 .section-3 > p {
-  background-color: #f0f4f4;
+  
   text-align: left;
   padding: 35px;
 }
@@ -404,7 +400,7 @@ p > .Cap {
 
 
 .section-4 {
-  height: 100%;
+  height: 100vh;
   padding: 0;
   margin: 0;
   width: 100%;
@@ -437,7 +433,7 @@ max-width: 100%;
 
 
 .section-4 > p {
-  background-color: #f0f4f4;
+  background-color:  rgba(15,9, 10, .7 );
   text-align: left;
   padding: 35px;
 }
@@ -461,22 +457,37 @@ footer{
   grid-template-areas: 
   '. top .'
   'spotify tribute year';
+  font-family: 'Josefin Sans';
+  
 
 }
 
 .btt{
+  display: flex;
+  justify-content: center;
   grid-area: top;
+  padding-top: 10px;
+  
 }
 
 .spotify{
+  display: flex;
+  justify-content: flex-start;
   grid-area: spotify;
+  padding: 15px;
 }
 
 .tribute{
+  display: flex;
+  justify-content: center;
   grid-area: tribute;
-  border: 2px solid black;
+  font-weight: 700;
+  
 }
 
 .year{
+  display: flex;
+  justify-content: flex-end;
   grid-area: year;
+  padding: 15px;
 }
