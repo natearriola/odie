@@ -1,29 +1,24 @@
 @import url("https://fonts.googleapis.com/css?family=Josefin+Sans:400,700");
-@import url('https://fonts.googleapis.com/css?family=Bungee+Shade');
+@import url("https://fonts.googleapis.com/css?family=Bungee+Shade");
 
 * {
   padding: 0;
   margin: 0;
+  overflow-x: hidden;
 }
 
 header {
-  margin: 0;
-  padding: 0;
-  height: 100vh;
-  background-image: url("images/mobilePhoto.jpg");
-    background-repeat: no-repeat;
-  background-size: cover;
-  background-position:  center;
   overflow-x: hidden;
-
+  overflow-y: hidden;
 }
 
+.landingimg {
+  width: 100%;
+}
 nav {
-  position: fixed;
   top: 0;
-  z-index: 5;
-  color: #edf7f8;
   height: 50px;
+  background-color: black;
 }
 h6 {
   position: relative;
@@ -33,9 +28,6 @@ h6 {
   color: #c05e00;
   font-size: 16px;
   font-family: "Josefin Sans";
-  
-
-
 }
 
 h3 {
@@ -44,15 +36,11 @@ h3 {
   color: #c05e00;
   text-transform: uppercase;
   font-weight: 700;
-  position: relative;
-  top: 36rem;
-  left: 8rem;
   z-index: 1;
-  
 }
 a {
   text-decoration: none;
-  color: #232323;
+  color: white;
   font-family: "Josefin Sans";
   transition: color 0.3s ease;
 }
@@ -60,6 +48,19 @@ a {
 a:hover {
   color: #e0902f;
 }
+
+.menu-desktop {
+  display: flex;
+  justify-content: center;
+  padding-right: 15px;
+  line-height: 50px;
+}
+
+.menu-desktop li {
+  padding-right: 15px;
+}
+/***********************
+MOBILE HAM NAV STYLES 
 
 .menu-toggle {
   display: block;
@@ -87,7 +88,7 @@ a:hover {
   height: 4px;
   margin-bottom: 5px;
   position: relative;
-  background: #f1f3f5;
+  background: black;
   border-radius: 3px;
   z-index: 3;
   transform-origin: 4px 0px;
@@ -135,96 +136,72 @@ a:hover {
   text-transform: uppercase;
 }
 
-.menu-toggle input:checked ~ ul {
+.menu-toggle input:checked ~ nav {
   transform: none;
 }
-
-.menu-desktop{
-  display: none;
-}
+***********************/
 
 /************************
 * DESKTOP VERSION NAV 
 *************************/
-@media only screen and (min-width:600px){
-  .menu{
+@media only screen and (min-width: 600px) {
+  .menu {
     margin: -100px 0 0 350px;
   }
-
-  
- 
 }
 
-@media only screen and (min-width: 1100px){
-  .menu{
-   display: block;
-   position: absolute;
+@media only screen and (min-width: 1100px) {
+  .menu {
+    display: block;
+    position: absolute;
   }
-  .menu-toggle{
+  .menu-toggle {
     display: none;
   }
- 
-  
+
   header {
     background-image: url("images/landingPhoto.jpg");
     background-repeat: no-repeat;
-  background-size: cover;
-  background-position:  center;
-
-    
+    background-size: cover;
+    background-position: center;
   }
 
-  .nav-d{
+  .nav-d {
     position: fixed;
     height: 40px;
     background-color: #edf7f8;
-    
   }
 
-  .menu-desktop{
-  display: flex;
-  justify-content: flex-start;
+  .menu-desktop {
+    display: flex;
+    justify-content: flex-start;
     list-style-type: none;
     margin-left: 5px;
     position: relative;
     bottom: 15px;
-  
-  
-    
- 
   }
 
- .menu-desktop li{
-   font-family:'Josefin Sans';
-    color: #CD640D;
+  .menu-desktop li {
+    font-family: "Josefin Sans";
+    color: #cd640d;
     font-weight: 400;
     text-transform: uppercase;
-  
-    
   }
 
-.menu-desktop a{
-   
-  font-size: 16px;
+  .menu-desktop a {
+    font-size: 16px;
     text-align: center;
     margin: 5px 15px 0 15px;
-   padding: 25px 15px 25px 5px;
-  
-
+    padding: 25px 15px 25px 5px;
   }
 
-  .menu-desktop li:hover{
+  .menu-desktop li:hover {
     -webkit-transform: rotateZ(10deg);
-        -ms-transform: rotateZ(10deg);
-        transform: rotateZ(10deg);
-        color: #0F090A;
+    -ms-transform: rotateZ(10deg);
+    transform: rotateZ(10deg);
+    color: #0f090a;
   }
-
-
-
 }
-
-
 
 /***********************************
 ********* General stylings**********
@@ -236,15 +213,47 @@ main {
   width: 100%;
 }
 
-p{
+p {
   color: #edf7f8;
-  overflow: auto;
- 
-
-
 }
 
 p > span {
+  font-size: 48px;
+}
+
+.container {
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+button {
+  color: black;
+  padding: 7px;
+  font-size: 16px;
+  background-color: white;
+  transition: background-color 0.5s linear;
+  -moz-transition: background-color 0.5s linear;
+  -webkit-transition: background-color 0.5s linear;
+  -ms-transition: background-color 0.5s linear;
+}
+
+button:hover {
+  background-color: transparent;
+  border: 2px solid black;
+}
+
+p,
+img,
+form,
+h3 {
+  padding: 1rem;
+}
+
+p {
+  font-size: 16px;
+}
+
+p > .Cap {
   font-size: 48px;
 }
 
@@ -253,239 +262,149 @@ ODIE SECTION 1
 *
 *************************************************/
 
-.content-container {
-  width: 100%;
-  background-image: url("images/Background.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  padding: 0;
+.section1 {
+  padding: 15px;
   margin: 0;
-  height: 100vh;
-}
-
-.MO-heading{
-
+  background-color: #8dc8d8;
   display: flex;
   justify-content: center;
+  flex-direction: column;
   align-items: center;
-
 }
 
-
-.content-container > p {
- border: 2px red solid;
+.section1 > p {
   text-align: left;
-  
 }
 
-
-
-.MO-heading > img {
-max-width: 100%;
-border: 2px solid red;
- 
+.section1 > img {
+  max-width: 100%;
 }
-
 
 /************************
 * DESKTOP ODIE SECTION 1
 *************************/
-@media only screen and (min-width: 1100px){
-
-
-  .content-container, .content-container > p{
+@media only screen and (min-width: 1100px) {
+  .content-container,
+  .content-container > p {
     height: 100vh;
   }
 
-  .MO-heading{
+  .MO-heading {
     height: 30vh;
   }
 }
-
-
 
 /***********************************
 ********* ODIE SECTION 2**********
 ***********************************/
 
-.section-2 {
-  padding: 0;
+.section2 {
+  padding: 15px;
   margin: 0;
- width: 100%;
   background-color: #3a5258;
- height: 100vh;
- border: 2px solid red;
- overflow-x: hidden;
- overflow-y: scroll;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
-
-.s2-heading > h3 {
-font-family: "Josefin Sans";
-font-weight: 700;
-color:transparent;
-font-size: 36px;
--webkit-text-stroke: 2px black;
-border: 2px solid red;
-
+.content-2 > h1 {
 }
 
-.s2-heading > img {
-max-width: 100%;
+.section2 > img {
+  max-width: 100%;
 }
 
-
-.section-2 > p {
+.content-2 > p {
   text-align: left;
- 
-  border: 2px solid white;
- 
 }
-
-p > .Cap {
-  font-size: 48px;
-}
-
-
 
 /***********************************
 ********* ODIE SECTION 3**********
 ***********************************/
-
-.section-3 {
-  padding: 0;
+.section3 {
+  padding: 15px;
   margin: 0;
-  width: 100%;
-  background-color: #CD640D;
-  display: flex; 
- justify-content: center;
- flex-direction: column;
- align-items: center;
- height: 100vh;
+  background-color: #cd640d;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
-
-.s3-heading {
-font-family: "Josefin Sans";
-font-weight: 700;
-color:transparent;
-font-size: 36px;
--webkit-text-stroke: 2px white;
- 
-
+.content-3 > h1 {
 }
 
-.section-3 > img {
- display: inline;
-  padding: 20px;
-max-width: 100%;
+.section3 > img {
+  max-width: 100%;
 }
 
-
-.section-3 > p {
-  
+.content-3 > p {
   text-align: left;
-  padding: 35px;
 }
-
-p > .Cap {
-  font-size: 48px;
-}
-
 /***********************************
 ********* ODIE SECTION 4**********
 ***********************************/
 
-
-
-.section-4 {
-  height: 100vh;
-  padding: 0;
+.section4 {
+  padding: 15px;
   margin: 0;
-  width: 100%;
-  background-color: black;
-  display: flex; 
- justify-content: center;
- flex-direction: column;
- align-items: center;
+  background-color: #414141;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
-
-.s4-heading {
- 
-position: relative;
-top: 200px;
-font-family: "Josefin Sans";
-font-weight: 700;
-color:transparent;
-font-size: 36px;
--webkit-text-stroke: 2px #8cc3d8;
- 
-
+.content-4 > h1 {
 }
 
-.section-4 > img {
- display: inline;
-  padding: 20px;
-max-width: 100%;
+.section4 > img {
+  max-width: 100%;
 }
 
-
-.section-4 > p {
-  background-color:  rgba(15,9, 10, .7 );
+.content-4 > p {
   text-align: left;
-  padding: 35px;
 }
-
-p > .Cap {
-  font-size: 48px;
-}
-
 
 /***********************************
 ********* ODIE FOOTER**********
 ***********************************/
 
-
-footer{
+footer {
   background-color: white;
   width: 100%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 50px 50px;
-  grid-template-areas: 
-  '. top .'
-  'spotify tribute year';
-  font-family: 'Josefin Sans';
-  
-
+  grid-template-areas:
+    ". top ."
+    "spotify tribute year";
+  font-family: "Josefin Sans";
 }
 
-.btt{
+.btt {
   display: flex;
   justify-content: center;
   grid-area: top;
   padding-top: 10px;
-  
 }
 
-.spotify{
+.spotify {
   display: flex;
   justify-content: flex-start;
   grid-area: spotify;
   padding: 15px;
 }
 
-.tribute{
+.tribute {
   display: flex;
   justify-content: center;
   grid-area: tribute;
   font-weight: 700;
-  
 }
 
-.year{
+.year {
   display: flex;
   justify-content: flex-end;
   grid-area: year;
