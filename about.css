@@ -1,0 +1,155 @@
+/* FONTS */
+
+@import url("https://fonts.googleapis.com/css?family=Josefin+Sans:400,700");
+@import url("https://fonts.googleapis.com/css?family=Bungee+Shade");
+
+/***************************************/
+
+
+
+
+
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family:'Josefin Sans';
+    font-weight: 700;
+    /*
+    background-color:#8Ac2d7;
+    */
+
+    /* DESKTOP COLOR BACKGROUND
+    background-image: linear-gradient(to right, #8dc8d8 40%, #1f1f1f 40%);
+    */
+}
+
+header{
+   padding: 0;
+   margin: 0;
+ width: 100%;
+ background-color: #fefefe;
+ height: 68px;
+ position: fixed;
+ top: 0;
+ line-height: 68px;
+
+
+}
+
+.nav{ 
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    position: absolute;
+
+    
+   
+}
+
+.menu{
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    
+    
+   
+}
+
+.menu li{
+    padding: 0 20px 0 20px;
+}
+
+a{
+    text-decoration: none;
+    color: #1f1f1f;
+}
+
+a:hover{
+    color: #8dc8d8;
+}
+
+
+h1{
+    padding: 0;
+    margin: 0;
+    color: transparent;
+    font-family: 'Josefin Sans';
+    color: transparent;
+    -webkit-text-stroke: 3px #c26c02 ;
+    font-size: 2rem;
+}
+
+
+
+/*******************************************
+GENERAL STYLIINGS
+******************************************/
+
+p{
+    color: white;
+    font-weight: 400;
+    font-size: 16px;
+
+}
+
+/***********************************************
+ABOUT CONTENT 
+*************************************************/
+
+main{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: minmax(100px,auto);
+    margin-top: 4.3rem;
+    height: 100vh;
+}
+
+
+ img{
+    max-width: 100%;
+    padding: 1rem;
+  
+}
+
+.Main-img{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    background-color: #8dc8d8;
+    width: 100%;
+}
+
+.content-about {
+    display: flex;
+margin-top: 4.3rem;
+background-color: #1f1f1f;
+flex-direction: column;
+align-items: flex-start;
+
+
+
+
+}
+
+.content{
+    padding: 1rem;
+}
+
+.about{
+    font-family: 'Bungee Shade';
+    color: #8dc8d8;
+    font-size: 3rem;
+
+}
+
+
+
+
