@@ -14,9 +14,11 @@ header {
 
 .landingimg {
   width: 100%;
+  padding: 0;
+  margin: 0;
 }
 nav {
-  top: 0;
+ 
   height: 50px;
   background-color: black;
 }
@@ -33,10 +35,17 @@ h6 {
 h3 {
   font-family: "Josefin Sans";
   font-size: 16px;
-  color: #c05e00;
+  color: white;
   text-transform: uppercase;
   font-weight: 700;
   z-index: 1;
+  position: absolute;
+  bottom: 50%;
+  left: 30%;
+  right: 50%;
+  width: 100%;
+  
+
 }
 a {
   text-decoration: none;
@@ -159,17 +168,13 @@ MOBILE HAM NAV STYLES
     display: none;
   }
 
-  header {
-    background-image: url("images/landingPhoto.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-  }
-
+ 
   .nav-d {
     position: fixed;
     height: 40px;
     background-color: #edf7f8;
+    padding: 0;
+    margin: 0;
   }
 
   .menu-desktop {
@@ -214,7 +219,9 @@ main {
 }
 
 p {
-  color: #edf7f8;
+  color: #fbfbfb;
+  font-size: 12px;
+  font-family: 'Josefin Sans';
 }
 
 p > span {
@@ -224,37 +231,93 @@ p > span {
 .container {
   overflow-y: hidden;
   overflow-x: hidden;
+ 
 }
 
-button {
-  color: black;
-  padding: 7px;
+form{
+  
+height: 64px;
+  
+}
+button{
+  overflow: hidden;
+  border: none;
+  background: none;
   font-size: 16px;
-  background-color: white;
-  transition: background-color 0.5s linear;
-  -moz-transition: background-color 0.5s linear;
-  -webkit-transition: background-color 0.5s linear;
-  -ms-transition: background-color 0.5s linear;
+  font-family: 'Josefin Sans';
+ 
+ 
 }
 
-button:hover {
-  background-color: transparent;
-  border: 2px solid black;
+.button {
+  position: relative;
+  color: white;
+  width: 150px;
+  height: 50px;
+  line-height: 50px;
+  transition: all 0.3s;
+  span {
+    transition: all 0.3s;
+    tranform: scale(1, 1);
+  }
+ 
 }
 
+.button::before, .button::after {
+  content: '';
+  position: absolute;
+  transition: all 0.3s;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 98%;
+  height: 95%;
+  z-index: 1;
+}
+
+.button::before {
+  left: 4px;
+  z-index: 1;
+
+opacity: 0;
+background: rgba(255, 255, 255, 0.1);
+transform: scale(0.1, 1);
+}
+.button:hover::before {
+  opacity: 1;
+  transform: scale(1, 1);
+}
+
+.button::after {
+  transition: all 0.3s;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+.button:hover::after {
+  transform: scale(1, .1);
+  opacity: 0;
+}
 p,
-img,
 form,
-h3 {
+h1 {
   padding: 1rem;
 }
 
-p {
-  font-size: 16px;
-}
+
 
 p > .Cap {
   font-size: 48px;
+}
+
+h1{
+  font-family: 'Bungee Shade';
+  position: relative;
+  top: 40px;
+  font-size:36px;
+  
+}
+img{
+position: relative;
+top: 40px;
 }
 
 /*************************************************
@@ -266,19 +329,33 @@ ODIE SECTION 1
   padding: 15px;
   margin: 0;
   background-color: #8dc8d8;
+  border: 2px solid red;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   flex-direction: column;
-  align-items: center;
+}
+
+.header-about{
+  text-align: left;
+  
+  
 }
 
 .section1 > p {
   text-align: left;
+  
 }
 
 .section1 > img {
   max-width: 100%;
 }
+
+.button-form-1{
+  display: flex;
+  justify-content: flex-start;
+}
+
+
 
 /************************
 * DESKTOP ODIE SECTION 1
@@ -302,13 +379,12 @@ ODIE SECTION 1
   padding: 15px;
   margin: 0;
   background-color: #3a5258;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
+ 
 }
 
 .content-2 > h1 {
+  text-align: right;
+  color: #cd640d;
 }
 
 .section2 > img {
@@ -316,7 +392,19 @@ ODIE SECTION 1
 }
 
 .content-2 > p {
-  text-align: left;
+  text-align: right;
+}
+
+form{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.button-form{
+  display: flex;
+  justify-content: flex-end;
+  border: 2px solid red;
+
 }
 
 /***********************************
@@ -326,10 +414,6 @@ ODIE SECTION 1
   padding: 15px;
   margin: 0;
   background-color: #cd640d;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
 }
 
 .content-3 > h1 {
@@ -342,6 +426,13 @@ ODIE SECTION 1
 .content-3 > p {
   text-align: left;
 }
+
+.button-form-3{
+  display:flex;
+  justify-content: center;
+}
+
+
 /***********************************
 ********* ODIE SECTION 4**********
 ***********************************/
@@ -350,10 +441,15 @@ ODIE SECTION 1
   padding: 15px;
   margin: 0;
   background-color: #414141;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
+}
+
+.header-4{
+  color: #cd640d;
+}
+
+ .img-4{
+position: relative;
+top: 40px;
 }
 
 .content-4 > h1 {
@@ -367,6 +463,10 @@ ODIE SECTION 1
   text-align: left;
 }
 
+.button-form-4{
+  display: flex;
+  justify-content: flex-start;
+}
 /***********************************
 ********* ODIE FOOTER**********
 ***********************************/
