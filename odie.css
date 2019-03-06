@@ -4,6 +4,12 @@
 * {
   padding: 0;
   margin: 0;
+ 
+  
+}
+body{
+ 
+  box-sizing: border-box;
   overflow-x: hidden;
 }
 
@@ -200,6 +206,55 @@ header{
   text-transform: lowercase;
 }
 
+.container{
+  width: 100%;
+  display: grid;
+  height: 100%;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas:
+  'content1 img1'
+  'img2 content2'
+  'content3 img3'
+  'img4 content4';
+   align-items: center;
+}
+
+
+
+
+.content-1{
+  grid-area: content1;
+  border: 2px solid red;
+}
+.section1 > img{
+  grid-area: img1;
+}
+
+.content-2{
+  grid-area: content2;
+}
+.section2 > img{
+  grid-area: img2;
+}
+
+.content-3{
+  grid-area: content3;
+}
+.section3 > img{
+  grid-area: img3;
+}
+
+.content-4{
+  grid-area: content4;
+}
+.section4 > img{
+  grid-area: img4;
+}
+
+
+
+
+
 }
 
 
@@ -250,6 +305,8 @@ main {
   padding: 0;
   margin: 0;
   width: 100%;
+
+  
   
 }
 
@@ -263,14 +320,9 @@ p > span {
   font-size: 48px;
 }
 
-.container {
-  overflow-y: hidden;
-  overflow-x: hidden;
- 
-}
+
 
 form{
-  
 height: 64px;
   
 }
@@ -351,6 +403,20 @@ h1{
   
 }
 
+img{
+ max-width: 100%;
+
+
+
+}
+.container{
+  padding: 5px;
+  height: 100%;
+}
+
+.content{
+  padding: 15px;
+}
 
 
 
@@ -360,12 +426,9 @@ ODIE SECTION 1
 *************************************************/
 
 .section1 {
-  padding: 15px;
   margin: 0;
   background-color: #8dc8d8;
-  display: flex;
-  justify-content: flex-end;
-  flex-direction: column;
+
 
 }
 
@@ -380,11 +443,6 @@ ODIE SECTION 1
   
 }
 
-.section1 > img {
-  max-width: 100%;
-  align-self: center;
-
-}
 
 .button-form-1{
   display: flex;
@@ -396,23 +454,19 @@ ODIE SECTION 1
 /************************
 * DESKTOP ODIE SECTION 1
 *************************/
-@media only screen and (min-width: 1100px) {
-  .content-container,
-  .content-container > p {
-    height: 100vh;
-  }
 
-  .MO-heading {
-    height: 30vh;
-  }
-}
+
+
+
+
+
 
 /***********************************
 ********* ODIE SECTION 2**********
 ***********************************/
 
 .section2 {
-  padding: 15px;
+
   margin: 0;
   background-color: #3a5258;
  
@@ -423,9 +477,7 @@ ODIE SECTION 1
   color: #cd640d;
 }
 
-.section2 > img {
-  max-width: 100%;
-}
+
 
 .content-2 > p {
   text-align: right;
@@ -447,17 +499,14 @@ form{
 ********* ODIE SECTION 3**********
 ***********************************/
 .section3 {
-  padding: 15px;
   margin: 0;
   background-color: #cd640d;
 }
 
-.content-3 > h1 {
+.content-3 > h1{
+  text-align: center;
 }
 
-.section3 > img {
-  max-width: 100%;
-}
 
 .content-3 > p {
   text-align: left;
@@ -474,7 +523,6 @@ form{
 ***********************************/
 
 .section4 {
-  padding: 15px;
   margin: 0;
   background-color: #414141;
 }
@@ -485,14 +533,11 @@ form{
 
  .img-4{
 position: relative;
-top: 40px;
+top: 7px;
 }
 
 .content-4 > h1 {
-}
 
-.section4 > img {
-  max-width: 100%;
 }
 
 .content-4 > p {
