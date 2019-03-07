@@ -80,7 +80,7 @@ nav {
 .arrow-down{
   position: relative;
   top: 50px;
-  right: 65px;
+  right: 60px;
   width: 50px;
   height: 50px;
  
@@ -101,12 +101,12 @@ a:hover {
 
 .menu-desktop {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
   list-style: none;
   z-index: 3;
   position: relative;
-  padding-right: 50px;
+  
   height: 50px;
 }
 
@@ -201,8 +201,13 @@ MOBILE HAM NAV STYLES
 *************************/
 @media screen and (min-width: 600px){
 
-
-
+.menu-desktop{
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  padding-right: 50px;
+}
+  
 
 .container{
   width: 100%;
@@ -218,8 +223,7 @@ MOBILE HAM NAV STYLES
 }
 
 .content{
-  position: relative;
-  top: 0;
+  
 }
 
 
@@ -399,7 +403,7 @@ transform: scale(0.1, 1);
 p,
 form,
 h1 {
-  padding: 1rem;
+  padding: 2rem;
 }
 
 
