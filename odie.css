@@ -16,13 +16,15 @@ body{
 header {
   background-image: url('images/odie\(desktop_.jpg');
   background-size: cover;
-  background-position: center 0px;
+  background-position: center 50px;
   height: 100vh;
   background-repeat: no-repeat;
   overflow-y: hidden;
 
 }
-
+.logo{
+  display: none;
+}
 .landingimg {
   display: none;
 }
@@ -200,7 +202,9 @@ MOBILE HAM NAV STYLES
 * DESKTOP VERSION NAV 
 *************************/
 @media screen and (min-width: 600px){
-
+header{
+  background-position: center 0px;
+}
 .menu-desktop{
   display: flex;
   justify-content: flex-end;
