@@ -14,9 +14,9 @@ body{
 }
 
 header {
-  background-image: url('images/mobilePhoto.jpg');
+  background-image: url('images/odie\(desktop_.jpg');
   background-size: cover;
-  background-position: center 50px;
+  background-position: center 0px;
   height: 100vh;
   background-repeat: no-repeat;
   overflow-y: hidden;
@@ -29,13 +29,31 @@ header {
 
 nav {
  position: fixed;
-  height: 50px;
-  background-color: #edf7f8;
   z-index: 3;
-
 }
 
+
+
+.bg{
+ 
+  background-color: #8ac2d7;
+  height: 50px;
+  width: 100%;
+ top: 0;
+  z-index: 1;
+ position: absolute;
+
+
+ 
+}
+
+
+
+
+
 .scroll{
+  width: 100%;
+  height: 100%;
   font-family: "Josefin Sans";
   font-size: 12px;
   color: white;
@@ -44,23 +62,37 @@ nav {
   z-index: 2;
   display: flex;
   justify-content: center;
-  width: 100%;
-  height: 100%;
-  
-  position: absolute;
   align-items: center;
-  padding-top: 10rem;
-  
+  height: 100vh;
+  padding-top: 5rem;
+}
+
+.scroll-bg{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #C26c02;
+  height: 40px;
+  width: 100px;
+  text-transform: lowercase;
+}
+
+.arrow-down{
+  position: relative;
+  top: 50px;
+  right: 65px;
+  width: 50px;
+  height: 50px;
  
 }
 
 a {
   font-size: 12px;
   text-decoration: none;
-  color: black;
+  color: #fafafa;
   font-family: "Josefin Sans";
   transition: color 0.3s ease;
-  text-transform: uppercase;
+  
 }
 
 a:hover {
@@ -69,9 +101,15 @@ a:hover {
 
 .menu-desktop {
   display: flex;
-  justify-content: center;
-  line-height: 50px;
+  justify-content: flex-end;
+  align-items: center;
+  list-style: none;
+  z-index: 3;
+  position: relative;
+  padding-right: 50px;
+  height: 50px;
 }
+
 
 .menu-desktop li {
   padding-right: 15px;
@@ -162,54 +200,14 @@ MOBILE HAM NAV STYLES
 * DESKTOP VERSION NAV 
 *************************/
 @media screen and (min-width: 600px){
-.landingimg{
-  display: flex;
-  width: 100%;
-  padding: 0;
-  margin: 0;
-  position: relative;
-  top: 50px;
-  height: 100%;
-  
-}
 
-header{
-  overflow-x: hidden;
-  overflow-y: hidden;
-  background-image: none;
-  height: 100%;
- 
-}
-.scroll{
-  font-family: "Josefin Sans";
-  font-size: 12px;
-  color: #white;
-  
-  text-transform: uppercase;
-  font-weight: 700;
-  z-index: 2;
-  display: flex;
-  justify-content: center;
-  
-  align-items: center;
-  height: 30vh;
- 
-}
 
-.scroll-bg{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #8dc8d8;
-  height: 30px;
-  width: 80px;
-  text-transform: lowercase;
-}
+
 
 .container{
   width: 100%;
   display: grid;
-  height: 100%;
+  
   grid-template-columns: repeat(2, 1fr);
   grid-template-areas:
   'content1 img1'
@@ -219,12 +217,18 @@ header{
    align-items: center;
 }
 
+.content{
+  position: relative;
+  top: 0;
+}
+
+
 
 
 
 .content-1{
   grid-area: content1;
-  border: 2px solid red;
+  
 }
 .section1 > img{
   grid-area: img1;
@@ -252,7 +256,26 @@ header{
 }
 
 
+.bg{
 
+  width: 400px;
+  right: 0;
+ 
+}
+.logo{
+  
+  margin: 0;
+  padding: 0;
+  line-height: 50px;
+  font-size: 20px;
+  padding-left: 30px;
+  background-color: transparent;
+  font-family: 'Bungee Shade';
+  font-size: 30px;
+  color:white;
+  
+  
+}
 
 
 }
@@ -261,10 +284,7 @@ header{
 
 @media screen and (min-width: 768px){
   
-  .scroll{
-  
-    height: 50vh;
-  }
+
   
  
   
@@ -273,10 +293,6 @@ header{
 
   @media screen and (min-width: 1000px){
   
-    .scroll{
-      
-      height: 80vh;
-    }
  
     
     }
@@ -284,10 +300,7 @@ header{
     
   @media screen and (min-width: 1300px){
   
-    .scroll{
-      
-      height: 100vh;
-    }
+
  
     
     }
@@ -415,7 +428,12 @@ img{
 }
 
 .content{
-  padding: 15px;
+  padding-right: 15px;
+  padding-left: 15px;
+ 
+ position: relative;
+ bottom: 3rem;
+  
 }
 
 
@@ -426,10 +444,20 @@ ODIE SECTION 1
 *************************************************/
 
 .section1 {
+ 
   margin: 0;
   background-color: #8dc8d8;
+ 
+ 
+
+ 
 
 
+}
+
+.section1 > img{
+padding-top: 3rem;
+ 
 }
 
 .header-about{
@@ -470,6 +498,10 @@ ODIE SECTION 1
   margin: 0;
   background-color: #3a5258;
  
+}
+
+.section2 > img{
+  padding-top: 3rem;
 }
 
 .content-2 > h1 {
