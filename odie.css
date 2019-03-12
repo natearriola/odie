@@ -227,9 +227,6 @@ header{
    align-items: center;
 }
 
-.content{
-  
-}
 
 
 
@@ -366,10 +363,9 @@ button{
   height: 50px;
   line-height: 50px;
   transition: all 0.3s;
-  span {
-    transition: all 0.3s;
-    tranform: scale(1, 1);
-  }
+
+   
+
  
 }
 
@@ -550,14 +546,6 @@ form{
   text-align: center;
 }
 
-.img-3{
-  
-    
- 
- 
-  
-}
-
 
 .content-3 > p {
   text-align: left;
@@ -582,19 +570,7 @@ form{
   color: #cd640d;
 }
 
- .img-4{
 
-  
-  
-    
-   
-  
-
-}
-
-.content-4 > h1 {
-
-}
 
 .content-4 > p {
   text-align: left;
