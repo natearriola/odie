@@ -15,7 +15,7 @@ body{
 
 header {
   
-  background-image: url('images/odie\(desktop_.jpg');
+  background-image: url('images/odie(desktop_.jpg');
   background-size: cover;
   background-position: center 50px;
   height: 100vh;
@@ -430,7 +430,7 @@ img{
  max-width: 100%;
  padding-top: 1rem;
  padding-bottom: 1rem;
-border: 2px solid red;
+
 }
 .container{
   width: 100%;
@@ -534,7 +534,7 @@ form{
 .button-form{
   display: flex;
   justify-content: flex-end;
-  border: 2px solid red;
+ 
 
 }
 
