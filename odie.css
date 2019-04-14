@@ -13,6 +13,8 @@ header {
 }
 
 .landingimg {
+  padding: 0;
+  margin: 0;
   width: 100%;
 }
 nav {
@@ -215,10 +217,11 @@ main {
 
 p {
   color: #edf7f8;
+  font-size: 16px;
 }
 
 p > span {
-  font-size: 48px;
+  font-size: 24px;
 }
 
 .container {
@@ -247,14 +250,6 @@ img,
 form,
 h3 {
   padding: 1rem;
-}
-
-p {
-  font-size: 16px;
-}
-
-p > .Cap {
-  font-size: 48px;
 }
 
 /*************************************************
@@ -305,10 +300,7 @@ ODIE SECTION 1
   display: flex;
   justify-content: center;
   flex-direction: column;
-  align-items: center;
-}
-
-.content-2 > h1 {
+  align-items: flex-end;
 }
 
 .section2 > img {
