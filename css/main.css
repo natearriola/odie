@@ -1,0 +1,274 @@
+/*************
+FONTS 
+*/
+@import url("https://fonts.googleapis.com/css?family=Playfair+Display:400,700,700i|Roboto");
+html, body {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 100%;
+  /******** 
+    MAIN CONTENT 
+    ****/
+}
+
+html header, body header {
+  height: 5vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1rem;
+}
+
+html .logo, body .logo {
+  font-family: 'Playfair Display';
+  font-weight: 400;
+  font-style: italic;
+  font-size: 16px;
+  color: #131313;
+}
+
+html .logo span, body .logo span {
+  font-family: 'roboto';
+  color: #7db9d1;
+  font-size: 12px;
+}
+
+html .menu-wrap, body .menu-wrap {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  /* show menu */
+}
+
+html .menu-wrap .toggler, body .menu-wrap .toggler {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  opacity: 0;
+}
+
+html .menu-wrap .hamburger, body .menu-wrap .hamburger {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  width: 60px;
+  height: 60px;
+  padding: .5rem;
+  background-color: rgba(255, 255, 255, 0.75);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+html .menu-wrap .hamburger > div, body .menu-wrap .hamburger > div {
+  position: relative;
+  width: 100%;
+  height: 4px;
+  background-color: #131313;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+html .menu-wrap .hamburger > div:before, html .menu-wrap .hamburger > div:after, body .menu-wrap .hamburger > div:before, body .menu-wrap .hamburger > div:after {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  top: -10px;
+  width: 100%;
+  height: 4px;
+  background: inherit;
+}
+
+html .menu-wrap .hamburger > div:after, body .menu-wrap .hamburger > div:after {
+  top: 10px;
+}
+
+html .menu-wrap .toggler:checked + .hamburger > div, body .menu-wrap .toggler:checked + .hamburger > div {
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
+}
+
+html .menu-wrap .toggler:checked + .hamburger > div:before, html .menu-wrap .toggler:checked + .hamburger > div:after, body .menu-wrap .toggler:checked + .hamburger > div:before, body .menu-wrap .toggler:checked + .hamburger > div:after {
+  top: 0;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+html .menu-wrap .toggle:checked:hover + .hamburger > div, body .menu-wrap .toggle:checked:hover + .hamburger > div {
+  -webkit-transform: rotate(225deg);
+          transform: rotate(225deg);
+}
+
+html .menu-wrap .toggler:checked ~ .menu, body .menu-wrap .toggler:checked ~ .menu {
+  visibility: visible;
+}
+
+html .menu-wrap .toggler:checked ~ .menu > div, body .menu-wrap .toggler:checked ~ .menu > div {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition-duration: 0.75s;
+          transition-duration: 0.75s;
+}
+
+html .menu-wrap .toggler:checked ~ .menu > div > div, body .menu-wrap .toggler:checked ~ .menu > div > div {
+  opacity: 1;
+  -webkit-transition: opacity 0.4s ease;
+  transition: opacity 0.4s ease;
+}
+
+html .menu-wrap .menu, body .menu-wrap .menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+html .menu-wrap .menu > div, body .menu-wrap .menu > div {
+  background: rgba(19, 19, 19, 0.9);
+  border-radius: 50%;
+  width: 200vw;
+  height: 200vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+html .menu-wrap .menu > div > div, body .menu-wrap .menu > div > div {
+  text-align: center;
+  max-width: 90vw;
+  max-height: 100vh;
+  -webkit-transition: opacity 0.4s ease;
+  transition: opacity 0.4s ease;
+  opacity: 0;
+}
+
+html .menu-wrap .menu > div > div > ul > li, body .menu-wrap .menu > div > div > ul > li {
+  list-style: none;
+  color: white;
+  font-size: 2rem;
+  padding: 1rem;
+  font-family: 'roboto';
+}
+
+html .menu-wrap .menu > div > div > ul > li > a, body .menu-wrap .menu > div > div > ul > li > a {
+  color: inherit;
+  text-decoration: none;
+  -webkit-transition: color 0.4 ease;
+  transition: color 0.4 ease;
+}
+
+html .menu-wrap .menu > div > div > ul > li > a:hover, body .menu-wrap .menu > div > div > ul > li > a:hover {
+  color: #7db9d1;
+}
+
+html main, body main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 90%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+html main img, body main img {
+  max-width: 80%;
+  position: relative;
+}
+
+html main .tribute, body main .tribute {
+  font-size: 12px;
+  text-align: center;
+  font-family: 'roboto';
+  color: #131313;
+  padding: 1rem;
+  line-height: 140%;
+}
+
+html main .tribute span, body main .tribute span {
+  font-family: 'Playfair Display';
+  font-weight: 700;
+  font-style: italic;
+  font-size: 48px;
+  color: #7db9d1;
+  line-height: 140%;
+}
+
+html main .lyric, body main .lyric {
+  padding: 1rem;
+  font-family: 'roboto';
+  font-size: 12px;
+}
+
+html main .pgnum, body main .pgnum {
+  position: absolute;
+  top: 50%;
+  right: 7%;
+  color: #7db9d1;
+  font-family: 'Playfair Display';
+  font-weight: 700;
+  font-size: 24px;
+}
+
+html main .pgnum span, body main .pgnum span {
+  color: #dedede;
+}
+/*# sourceMappingURL=main.css.map */
