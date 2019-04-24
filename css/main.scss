@@ -18,10 +18,11 @@ html, body{
 
     header{
      
-        height: 5vh;
+        height: 60px;
         display: flex;
         align-items: center;
         padding: 1rem;
+        background-color: map-get($colors, primary);
 
     }
 
@@ -29,8 +30,8 @@ html, body{
         font-family: 'Playfair Display';
         font-weight: 400;
         font-style: italic;
-        font-size: 16px;
-        color:map-get($colors, secondary);
+        font-size: 24px;
+        color:white;
         span{
             font-family: 'roboto';
             color: map-get($colors, primary);
@@ -62,8 +63,8 @@ z-index: 1;
     z-index: 1;
     width: 60px;
     height: 60px;
-    padding: .5rem;
-    background-color: rgba(255,255,255, .75);
+    padding: 1rem;
+    
     display: flex;
     align-items: center;
     justify-content: center;
@@ -73,27 +74,29 @@ z-index: 1;
 }
 .hamburger > div {
     position: relative;
-    width: 100%;
+    width: 75%;
     height: 4px;
     background-color: map-get($colors, secondary);
     display: flex;
     align-items: center;
     justify-content: center;
     transition: all 0.4s ease;
+    
 }
 
 .hamburger > div:before, .hamburger > div:after{
     content:'';
     position: absolute;
     z-index: 1;
-    top: -10px;
+    top: -8px;
     width: 100%;
     height: 4px;
     background: inherit;
+  
 }
 
 .hamburger > div:after{
-    top: 10px;
+    top: 8px;
 }
 
 .toggler:checked + .hamburger > div{
@@ -145,8 +148,8 @@ z-index: 1;
 
 
 .menu > div {
-    background: rgba(19,19,19, .9);
-    border-radius: 50%;
+    background: map-get($colors, primary);
+   border-radius: 70%;
     width: 200vw;
     height: 200vw;
     display: flex;
@@ -184,7 +187,7 @@ z-index: 1;
 }
 
 .menu > div > div > ul > li > a:hover{
-    color: map-get($colors, primary);
+    color: map-get($colors, secondary);
 }
 
 
@@ -196,10 +199,11 @@ z-index: 1;
     ****/
 
     main {
+        
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 90%;
+        height: 80%;
         flex-direction: column;
         
         img{
@@ -233,6 +237,7 @@ span{
         }
 
         .pgnum{
+            visibility: hidden;
             position: absolute;
             top: 50%;
             right: 7%;
@@ -244,6 +249,28 @@ span{
             span{
                 color:#dedede;
             }
+        }
+
+        .button{
+            border: 2px solid map-get($colors, primary);
+            padding: .5rem;
+            width: 20%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(125,185,209,0);
+            transition: color 0.3s ease;
+
+            a{
+                color: map-get($colors, secondary);
+                text-decoration: none;
+                font-family: 'roboto';
+                font-size: 12px;
+            }
+        }
+
+        .button:hover{
+            background-color: rgba(125, 185,209,1);
         }
     }
       

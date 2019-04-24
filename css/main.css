@@ -14,7 +14,7 @@ html, body {
 }
 
 html header, body header {
-  height: 5vh;
+  height: 60px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -22,14 +22,15 @@ html header, body header {
       -ms-flex-align: center;
           align-items: center;
   padding: 1rem;
+  background-color: #7db9d1;
 }
 
 html .logo, body .logo {
   font-family: 'Playfair Display';
   font-weight: 400;
   font-style: italic;
-  font-size: 16px;
-  color: #131313;
+  font-size: 24px;
+  color: white;
 }
 
 html .logo span, body .logo span {
@@ -64,8 +65,7 @@ html .menu-wrap .hamburger, body .menu-wrap .hamburger {
   z-index: 1;
   width: 60px;
   height: 60px;
-  padding: .5rem;
-  background-color: rgba(255, 255, 255, 0.75);
+  padding: 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -79,7 +79,7 @@ html .menu-wrap .hamburger, body .menu-wrap .hamburger {
 
 html .menu-wrap .hamburger > div, body .menu-wrap .hamburger > div {
   position: relative;
-  width: 100%;
+  width: 75%;
   height: 4px;
   background-color: #131313;
   display: -webkit-box;
@@ -99,14 +99,14 @@ html .menu-wrap .hamburger > div:before, html .menu-wrap .hamburger > div:after,
   content: '';
   position: absolute;
   z-index: 1;
-  top: -10px;
+  top: -8px;
   width: 100%;
   height: 4px;
   background: inherit;
 }
 
 html .menu-wrap .hamburger > div:after, body .menu-wrap .hamburger > div:after {
-  top: 10px;
+  top: 8px;
 }
 
 html .menu-wrap .toggler:checked + .hamburger > div, body .menu-wrap .toggler:checked + .hamburger > div {
@@ -162,8 +162,8 @@ html .menu-wrap .menu, body .menu-wrap .menu {
 }
 
 html .menu-wrap .menu > div, body .menu-wrap .menu > div {
-  background: rgba(19, 19, 19, 0.9);
-  border-radius: 50%;
+  background: #7db9d1;
+  border-radius: 70%;
   width: 200vw;
   height: 200vw;
   display: -webkit-box;
@@ -209,7 +209,7 @@ html .menu-wrap .menu > div > div > ul > li > a, body .menu-wrap .menu > div > d
 }
 
 html .menu-wrap .menu > div > div > ul > li > a:hover, body .menu-wrap .menu > div > div > ul > li > a:hover {
-  color: #7db9d1;
+  color: #131313;
 }
 
 html main, body main {
@@ -222,7 +222,7 @@ html main, body main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 90%;
+  height: 80%;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -259,6 +259,7 @@ html main .lyric, body main .lyric {
 }
 
 html main .pgnum, body main .pgnum {
+  visibility: hidden;
   position: absolute;
   top: 50%;
   right: 7%;
@@ -270,5 +271,34 @@ html main .pgnum, body main .pgnum {
 
 html main .pgnum span, body main .pgnum span {
   color: #dedede;
+}
+
+html main .button, body main .button {
+  border: 2px solid #7db9d1;
+  padding: .5rem;
+  width: 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: rgba(125, 185, 209, 0);
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+}
+
+html main .button a, body main .button a {
+  color: #131313;
+  text-decoration: none;
+  font-family: 'roboto';
+  font-size: 12px;
+}
+
+html main .button:hover, body main .button:hover {
+  background-color: #7db9d1;
 }
 /*# sourceMappingURL=main.css.map */
