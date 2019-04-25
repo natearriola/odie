@@ -1,280 +1,168 @@
 $colors:(
     primary: #7db9d1,
-    secondary: #131313
+    secondary: #1f1f1f,
+    accent: #FFF7F0,
+    cta: #f25d07
 );
 
 
 /*************
 FONTS 
 */
-@import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,700,700i|Roboto');
+@import url('https://fonts.googleapis.com/css?family=Covered+By+Your+Grace|Roboto|Shadows+Into+Light');
 
 
-html, body{
-    padding: 0;
+*{
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
-    height: 100%;
-   
-  
-
-
-    .logo{
+     
       
-        display: flex;
-        align-items: center;
-        padding-left: 1rem;
-        border: 2px solid red;
-        height: 80px;
-        font-family: 'Playfair Display';
-        font-weight: 400;
-        font-style: italic;
-        font-size: 24px;
-        color:map-get($colors,secondary);
-        span{
-            font-family: 'roboto';
-            color: map-get($colors, primary);
-            font-size: 12px;
-        }
-    }
-
-    .menu-wrap{
-position: fixed;
-top: 0;
-right: 0;
-
-z-index: 1;
-
-.toggler{
-    position: absolute;
-    top: 0;
- right: 0;
-    z-index: 2;
-    cursor: pointer;
-    width: 50px;
-    height: 50px;
-    opacity: 0;
 }
 
-.hamburger{
-    position: absolute;
-    top: 0;
-    right: 0;
-    z-index: 1;
-    width: 60px;
-    height: 60px;
-    padding: 1rem;
-    
-    display: flex;
-    align-items: center;
-    justify-content: center;
-   
-
-
-}
-.hamburger > div {
-    position: relative;
-    width: 75%;
-    height: 4px;
-    background-color: map-get($colors, secondary);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.4s ease;
-    
-}
-
-.hamburger > div:before, .hamburger > div:after{
-    content:'';
-    position: absolute;
-    z-index: 1;
-    top: -8px;
-    width: 100%;
-    height: 4px;
-    background: inherit;
-  
-}
-
-.hamburger > div:after{
-    top: 8px;
-}
-
-.toggler:checked + .hamburger > div{
-    transform: rotate(135deg);
-}
-
-.toggler:checked + .hamburger > div:before,.toggler:checked + .hamburger > div:after {
-    top: 0;
-    transform: rotate(90deg);
-
-
-}
-
-
-.toggle:checked:hover + .hamburger > div{
-    transform: rotate(225deg);
-
-}
-
-/* show menu */
-
-.toggler:checked ~ .menu {
-    visibility: visible;
-}
-
-.toggler:checked ~ .menu > div {
-    transform: scale(1);
-    transition-duration: 0.75s;
-}
-
-.toggler:checked ~ .menu > div > div{
-    opacity: 1;
-    transition: opacity 0.4s ease;
-}
-
-.menu{
-    position: fixed;
-    top: 0;
-    right: 0;
-    
-    width: 100%;
+body{
     height: 100%;
-    visibility: hidden;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-}
-
-
-.menu > div {
-    background: map-get($colors, primary);
-   border-radius: 70%;
-    width: 200vw;
-    height: 200vw;
-    display: flex;
-    flex: none;
-    align-items: center;
-    justify-content: center;
-    transform: scale(0);
-    transition: all 0.4s ease;
-
-}
-
-.menu > div > div{
-    text-align: center;
-    max-width: 90vw;
-    max-height: 100vh;
-    transition: opacity 0.4s ease;
-    opacity: 0;
-}
-
-.menu > div > div > ul > li {
-    list-style: none;
-    color: white;
-    font-size: 2rem;
-    padding: 1rem;
+    width: 100%;
     font-family: 'roboto';
-    
-
-}
-
-.menu > div > div > ul > li > a{
-    color: inherit;
-    text-decoration: none;
-    transition: color 0.4 ease;
-
-}
-
-.menu > div > div > ul > li > a:hover{
-    color: map-get($colors, secondary);
-}
-
-
-    }
-
-
-    /******** 
-    MAIN CONTENT 
-    ****/
-
-    main {
-        border: 2px solid red;
-        height: 90vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-       
-        flex-direction: column;
+    background-image:
+    radial-gradient(
+      circle,
+      #96dcf8,
+      #77a3be
+    );
+    header{
+        width: 100%;
+      
         
-        img{
-            max-width: 80%;
-            position: relative;
-            
-        }
+        .navbar{
+            font-size: 16px;
+           
+            padding-bottom: 10px;
+           
+            .navbar-toggle{
+                padding: 2rem;
+                position: absolute;
+                top: 10px;
+                right: 20px;
+                cursor: pointer;
+                color: map-get($colors, secondary);
+                font-size: 24px;
+            }
 
-        .tribute{
-            font-size: 12px;
+            .main-nav{
+                list-style-type: none;
+               display: none;
+            }
+
+            .active{
+               display: flex;
+               justify-content: center;
+            }
+
+            .main-nav li{
+                text-align: center;
+                margin: 0 0 15px 15px;
+                display: inline-block;
+                text-transform: uppercase;
+                
+                
+            }
+
+        
+
             
-            text-align: center;
-            font-family:'roboto';
+
+            .nav-links{
+                color: map-get($colors, secondary);
+                font-family: 'roboto';
+               position: relative;
+               text-decoration: none;
+               
+            }
+
+           .nav-links:hover{
             color: map-get($colors, secondary);
-            
-            line-height: 140%;
-span{
-    font-family: 'Playfair Display';
-    font-weight: 700;
-    font-style: italic;
-    font-size: 48px;
-    color: map-get($colors, primary);
-    line-height: 140%;
-    
-}
-        }
+           }
 
-        .lyric{
-            padding: 1rem;
-            font-family:'roboto';
-            font-size: 12px;
-        }
+            .nav-links:before{
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 2px;
+                bottom: 0;
+                left: 0;
+                background-color: map-get($colors, accent);
+                visibility: hidden;
+                -webkit-transform: scaleX(0);
+                transform: scaleX(0);
+                -webkit-transition: all 0.3s ease-in-out 0s;
+                transition: all 0.3s ease-in-out 0s;
+            }
 
-        .pgnum{
-            visibility: hidden;
-            position: absolute;
-            top: 50%;
-            right: 7%;
-            color:map-get($colors, primary);
-            font-family: 'Playfair Display';
-            font-weight: 700;
-            font-size: 24px;
+            .nav-links:hover:before{
+                visibility: visible;
+                -webkit-transform: scaleX(1);
+                transform: scaleX(1);
+            }
 
-            span{
-                color:#dedede;
+          
+
+            .logo{
+                padding: 1rem;
+                color: map-get($colors, accent);
+                font-family:'Covered By Your Grace';
+                font-size: 36px;
+                display: inline-block;
+                margin-top: 10px;
+                margin-left: 20px;
+                text-decoration: none;
+                transition: transform .4s ease;
+            }
+
+            .logo:hover{
+                transform: scale(1.3);
             }
         }
+    }
 
-        .button{
-            border: 2px solid map-get($colors, primary);
-            padding: .5rem;
-            width: 20%;
+
+    main{
+        
+
+        .landing{
+            
+            height: 90vh;
             display: flex;
             justify-content: center;
+            flex-direction: column;
             align-items: center;
-            background-color: rgba(125,185,209,0);
-            transition: color 0.3s ease;
-
-            a{
-                color: map-get($colors, secondary);
-                text-decoration: none;
-                font-family: 'roboto';
-                font-size: 12px;
+            
+            img{
+                max-width: 70%;
             }
-        }
+            
 
-        .button:hover{
-            background-color: rgba(125, 185,209,1);
+            .message{
+                font-family: 'Shadows into light';
+                font-size: 16px;
+                color: map-get($colors, secondary);
+                padding: 2rem 2rem 0 2rem;
+
+                .cta{
+                    font-family: 'roboto';
+                    padding-top: 2rem;
+                    color: map-get($colors, cta);
+                    text-align: center;
+                    font-size: 12px;
+
+                }
+            }
+
+            
+
+
+
         }
     }
-      
+
 }
