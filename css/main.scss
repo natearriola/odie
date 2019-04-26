@@ -167,7 +167,7 @@ body {
       background-image: radial-gradient(circle, #96dcf8 25%, #5a839d 90%);
 
       img {
-        max-width: 60%;
+        max-width: 40%;
 
         @include for-tablet-landscape-up {
           max-width: 30%;
