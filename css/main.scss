@@ -167,14 +167,18 @@ body {
       background-image: radial-gradient(circle, #96dcf8 25%, #5a839d 90%);
 
       img {
-        max-width: 50%;
+        max-width: 80%;
 
         @include for-tablet-landscape-up {
           max-width: 30%;
         }
 
+        @include for-desktop-up{
+            max-width: 25%;
+        }
+
         @include for-big-desktop-up {
-          max-width: 20%;
+          max-width: 60%;
         }
       }
 
@@ -212,23 +216,19 @@ body {
       height: 100vh;
 
       img {
-        max-width: 80%;
+        max-width: 100%;
 
         @include for-tablet-portrait-up {
           max-width: 90%;
         }
 
         @include for-tablet-landscape-up {
-          max-width: 60%;
+          max-width: 45%;
         }
 
-        @include for-desktop-up {
-          max-width: 40%;
-        }
+      
 
-        @include for-big-desktop-up {
-          max-width: 60%;
-        }
+       
       }
 
       .about-content > h1 {
@@ -238,8 +238,13 @@ body {
         color: map-get($colors, primary);
         text-align: center;
         font-size: 48px;
-        padding: 1rem;
+        padding: 5rem;
+        padding-bottom: 1rem;
         text-transform: uppercase;
+
+        @include for-tablet-landscape-up{
+            text-align: left;
+        }
 
         @include for-big-desktop-up {
           font-size: 64px;
@@ -254,7 +259,7 @@ body {
         font-size: 12px;
         line-height: 200%;
         padding: 1rem;
-        text-indent: 2%;
+        
 
         @include for-tablet-portrait-up {
           padding: 5rem;
@@ -263,18 +268,21 @@ body {
           font-size: 16px;
         }
 
-        @include for-desktop-up {
-          font-size: 16px;
-          padding: 10rem;
-          padding-bottom: 0rem;
-          padding-top: 0;
+        @include for-tablet-landscape-up{
+            text-align: left;
         }
 
+
+        @include for-desktop-up {
+          font-size: 16px;
+         
+        }
+
+       
         @include for-desktop-up {
           font-size: 18px;
-          padding: 18rem;
-          padding-bottom: 0rem;
-          padding-top: 0;
+          
+          
         }
       }
     }
