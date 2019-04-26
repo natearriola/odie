@@ -36,7 +36,7 @@ body header .navbar {
 
 body header .navbar .navbar-toggle {
   padding: 2rem;
-  padding-top: 1.5rem;
+  padding-top: 1rem;
   position: absolute;
   top: 10px;
   right: 20px;
@@ -111,7 +111,7 @@ body header .navbar .logo {
   padding-bottom: 0;
   color: #fff7f0;
   font-family: "Covered By Your Grace";
-  font-size: 36px;
+  font-size: 22px;
   display: inline-block;
   margin-top: 10px;
   margin-left: 20px;
@@ -152,7 +152,7 @@ body main .landing {
 }
 
 body main .landing img {
-  max-width: 40%;
+  max-width: 50%;
 }
 
 @media (min-width: 900px) {
@@ -163,7 +163,7 @@ body main .landing img {
 
 @media (min-width: 1800px) {
   body main .landing img {
-    max-width: 90%;
+    max-width: 20%;
   }
 }
 

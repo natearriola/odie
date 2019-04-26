@@ -66,7 +66,7 @@ body {
 
       .navbar-toggle {
         padding: 2rem;
-        padding-top: 1.5rem;
+        padding-top: 1rem;
         position: absolute;
         top: 10px;
         right: 20px;
@@ -135,7 +135,7 @@ body {
         padding-bottom: 0;
         color: map-get($colors, accent);
         font-family: "Covered By Your Grace";
-        font-size: 36px;
+        font-size: 22px;
         display: inline-block;
         margin-top: 10px;
         margin-left: 20px;
@@ -167,14 +167,14 @@ body {
       background-image: radial-gradient(circle, #96dcf8 25%, #5a839d 90%);
 
       img {
-        max-width: 40%;
+        max-width: 50%;
 
         @include for-tablet-landscape-up {
           max-width: 30%;
         }
 
         @include for-big-desktop-up {
-          max-width: 90%;
+          max-width: 20%;
         }
       }
 
