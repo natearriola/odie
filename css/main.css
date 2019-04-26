@@ -220,7 +220,7 @@ body main .about {
 }
 
 body main .about img {
-  max-width: 80%;
+  max-width: 60%;
 }
 
 @media (min-width: 600px) {
