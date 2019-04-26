@@ -152,7 +152,7 @@ body main .landing {
 }
 
 body main .landing img {
-  max-width: 80%;
+  max-width: 50%;
 }
 
 @media (min-width: 900px) {
@@ -220,7 +220,7 @@ body main .about {
 }
 
 body main .about img {
-  max-width: 100%;
+  max-width: 80%;
 }
 
 @media (min-width: 600px) {
