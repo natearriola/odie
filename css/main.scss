@@ -167,7 +167,7 @@ body {
       background-image: radial-gradient(circle, #96dcf8 25%, #5a839d 90%);
 
       img {
-        max-width: 30%;
+        max-width: 50%;
 
         @include for-tablet-landscape-up {
           max-width: 30%;
@@ -209,14 +209,15 @@ body {
 
     .about {
       display: flex;
-      justify-content: center;
+      justify-content: flex-start;
       flex-direction: column;
       align-items: center;
       background-color: map-get($colors, accent);
       height: 100vh;
+      padding-top: 2rem;
 
       img {
-        max-width: 80%;
+        max-width: 75%;
 
         @include for-tablet-portrait-up {
           max-width: 90%;
@@ -237,8 +238,9 @@ body {
         font-style: italic;
         color: map-get($colors, primary);
         text-align: center;
-        font-size: 48px;
+        font-size: 22px;
         padding: 5rem;
+        padding-top: 1rem;
         padding-bottom: 1rem;
         text-transform: uppercase;
 
@@ -247,7 +249,7 @@ body {
         }
 
         @include for-big-desktop-up {
-          font-size: 64px;
+          font-size: 48px;
         }
       }
 
@@ -259,6 +261,7 @@ body {
         font-size: 12px;
         line-height: 200%;
         padding: 1rem;
+        padding-top: 0;
         
 
         @include for-tablet-portrait-up {
