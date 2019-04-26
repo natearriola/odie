@@ -212,7 +212,7 @@ body {
       height: 100vh;
 
       img {
-        max-width: 100%;
+        max-width: 80%;
 
         @include for-tablet-portrait-up {
           max-width: 90%;
