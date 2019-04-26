@@ -1,3 +1,6 @@
+/******************** 
+Responsive Media Queries 
+********/
 /*************
 FONTS 
 */
@@ -12,8 +15,11 @@ FONTS
 body {
   height: 100%;
   width: 100%;
-  font-family: 'roboto';
+  font-family: "roboto";
   background-image: radial-gradient(circle, #96dcf8, #77a3be);
+  /*******
+  MAIN CONTENT 
+  */
 }
 
 body header {
@@ -27,6 +33,7 @@ body header .navbar {
 
 body header .navbar .navbar-toggle {
   padding: 2rem;
+  padding-top: 1.5rem;
   position: absolute;
   top: 10px;
   right: 20px;
@@ -47,18 +54,20 @@ body header .navbar .active {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
 body header .navbar .main-nav li {
   text-align: center;
   margin: 0 0 15px 15px;
-  display: inline-block;
   text-transform: uppercase;
 }
 
 body header .navbar .nav-links {
   color: #1f1f1f;
-  font-family: 'roboto';
+  font-family: "roboto";
   position: relative;
   text-decoration: none;
 }
@@ -74,7 +83,7 @@ body header .navbar .nav-links:before {
   height: 2px;
   bottom: 0;
   left: 0;
-  background-color: #FFF7F0;
+  background-color: #fff7f0;
   visibility: hidden;
   -webkit-transform: scaleX(0);
   transform: scaleX(0);
@@ -90,17 +99,18 @@ body header .navbar .nav-links:hover:before {
 
 body header .navbar .logo {
   padding: 1rem;
-  color: #FFF7F0;
-  font-family: 'Covered By Your Grace';
+  padding-bottom: 0;
+  color: #fff7f0;
+  font-family: "Covered By Your Grace";
   font-size: 36px;
   display: inline-block;
   margin-top: 10px;
   margin-left: 20px;
   text-decoration: none;
-  -webkit-transition: -webkit-transform .4s ease;
-  transition: -webkit-transform .4s ease;
-  transition: transform .4s ease;
-  transition: transform .4s ease, -webkit-transform .4s ease;
+  -webkit-transition: -webkit-transform 0.4s ease;
+  transition: -webkit-transform 0.4s ease;
+  transition: transform 0.4s ease;
+  transition: transform 0.4s ease, -webkit-transform 0.4s ease;
 }
 
 body header .navbar .logo:hover {
@@ -126,18 +136,30 @@ body main .landing {
 }
 
 body main .landing img {
-  max-width: 70%;
+  max-width: 60%;
+}
+
+@media (min-width: 900px) {
+  body main .landing img {
+    max-width: 30%;
+  }
+}
+
+@media (min-width: 1800px) {
+  body main .landing img {
+    max-width: 90%;
+  }
 }
 
 body main .landing .message {
-  font-family: 'Shadows into light';
+  font-family: "Shadows into light";
   font-size: 16px;
   color: #1f1f1f;
-  padding: 2rem 2rem 0 2rem;
+  padding: 1rem 1rem 0 1rem;
 }
 
 body main .landing .message .cta {
-  font-family: 'roboto';
+  font-family: "roboto";
   padding-top: 2rem;
   color: #f25d07;
   text-align: center;
