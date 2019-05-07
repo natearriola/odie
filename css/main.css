@@ -219,31 +219,33 @@ body main .about {
           align-items: center;
 }
 
-body main .about .img-padding {
-  padding: 1rem;
-  background-color: #7db9d1;
-}
-
-body main .about .img-padding .img-container {
+body main .about .img-container {
   background-color: #292929;
-  /*
-        background-image: radial-gradient(circle, #CD640D 25%, #994A09 100%);
-        */
+  width: 100%;
   padding: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-body main .about .img-padding .img-container img {
+body main .about .img-container img {
   max-width: 100%;
 }
 
 @media (min-width: 600px) {
-  body main .about .img-padding .img-container img {
+  body main .about .img-container img {
     max-width: 90%;
   }
 }
 
 @media (min-width: 900px) {
-  body main .about .img-padding .img-container img {
+  body main .about .img-container img {
     max-width: 45%;
   }
 }
@@ -332,22 +334,24 @@ body main .rec {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-body main .rec .img-padding {
   background-color: #7db9d1;
-  padding: 1rem;
 }
 
-body main .rec .img-padding .img-container {
-  padding: 1rem;
-  padding: 2rem 2rem 0 2rem;
-  background-color: #D98B2B;
+body main .rec .img-container {
+  padding: 2rem;
+  background-color: #fdd39f;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-body main .rec .img-padding .img-container img {
+body main .rec .img-container img {
   position: relative;
-  top: 5px;
+  top: 35px;
   max-width: 100%;
 }
 
@@ -366,7 +370,7 @@ body main .rec .rec-content h1 {
 }
 
 body main .rec .rec-content p {
-  font-size: 12px;
+  font-size: 16px;
   font-family: 'roboto';
   font-weight: 400;
   text-align: left;
