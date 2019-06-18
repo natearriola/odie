@@ -195,8 +195,12 @@ body main .landing .message p {
   }
 }
 
-body main .landing .message i {
-  font-size: 18px;
+body main .landing .message a {
+  color: white;
+}
+
+body main .landing .message a i {
+  font-size: 36px;
   color: white;
 }
 
