@@ -267,7 +267,8 @@ body {
 
       .button-2 {
         width: 70%;
-
+        border: none;
+        border-radius: 5%;
         font-family: "Shadows into light";
         font-size: 24px;
         height: 80px;
@@ -278,7 +279,6 @@ body {
 }
 
 footer {
-  border: 2px solid red;
   background-color: map-get($colors, primary);
   height: 40vh;
   display: flex;

@@ -300,6 +300,8 @@ body main .rec .img-container img {
 
 body main .rec .button-2 {
   width: 70%;
+  border: none;
+  border-radius: 5%;
   font-family: "Shadows into light";
   font-size: 24px;
   height: 80px;
@@ -307,7 +309,6 @@ body main .rec .button-2 {
 }
 
 footer {
-  border: 2px solid red;
   background-color: #7db9d1;
   height: 40vh;
   display: -webkit-box;
