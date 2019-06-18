@@ -127,10 +127,6 @@ body header .navbar .nav-links:hover:before {
   transform: scaleX(1);
 }
 
-body main {
-  height: 100vh;
-}
-
 body main .landing {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -251,7 +247,7 @@ body main .about .img-container img {
 }
 
 body main .about .about-content {
-  background-color: #7db9d1;
+  background-color: #fff7f0;
   padding: 1rem;
 }
 
@@ -259,11 +255,11 @@ body main .about .about-content h1 {
   font-family: "Anton";
   text-transform: uppercase;
   padding: 1rem;
-  padding-bottom: 0;
-  padding-top: 0;
+  border: 2px solid red;
+  font-weight: 400;
   letter-spacing: 2px;
-  color: #fff7f0;
-  text-align: left;
+  color: #1f1f1f;
+  text-align: center;
   font-size: 36px;
   font-weight: 500;
 }
@@ -283,7 +279,7 @@ body main .about .about-content h1 {
 body main .about .about-content p {
   font-family: "roboto";
   font-weight: 400;
-  color: #1f1f1f;
+  color: #4b4b4b;
   text-align: left;
   font-size: 12px;
   line-height: 200%;
@@ -334,7 +330,7 @@ body main .rec {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #7db9d1;
+  border: 2px solid red;
 }
 
 body main .rec .img-container {
@@ -360,28 +356,35 @@ body main .rec .img-container img {
 
 body main .rec .rec-content {
   padding: 2rem;
-  background-color: #7db9d1;
-  height: 100%;
+  background-color: #fff7f0;
 }
 
 body main .rec .rec-content h1 {
-  font-family: 'Anton';
+  font-family: "Anton";
   font-size: 36px;
-  text-align: left;
-  color: #fff7f0;
+  text-align: center;
+  font-weight: 400;
+  padding: 1rem;
+  color: #1f1f1f;
   letter-spacing: 2px;
 }
 
 body main .rec .rec-content p {
-  font-size: 16px;
-  font-family: 'roboto';
+  font-size: 18px;
+  font-family: "roboto";
   font-weight: 400;
   text-align: left;
   line-height: 200%;
   padding: 1rem;
-  padding-top: 0;
-  padding-left: 0;
-  padding-bottom: 3rem;
+  padding-bottom: 2rem;
   color: #1f1f1f;
+}
+
+footer {
+  border: 2px solid red;
+}
+
+footer .copy {
+  height: 10px;
 }
 /*# sourceMappingURL=main.css.map */

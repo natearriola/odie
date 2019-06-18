@@ -38,7 +38,7 @@ Responsive Media Queries
 /*************
 FONTS 
 */
-@import url('https://fonts.googleapis.com/css?family=Anton|Roboto:400,500|Shadows+Into+Light');
+@import url("https://fonts.googleapis.com/css?family=Anton|Roboto:400,500|Shadows+Into+Light");
 
 * {
   margin: 0;
@@ -53,10 +53,9 @@ body {
 
   header {
     width: 100%;
-    
-    
+
     position: fixed;
-    
+
     .navbar {
       font-size: 16px;
       padding-bottom: 10px;
@@ -127,7 +126,7 @@ body {
         -webkit-transform: scaleX(1);
         transform: scaleX(1);
       }
-/*
+      /*
       .logo {
         padding: 1rem;
         padding-bottom: 0;
@@ -158,10 +157,6 @@ body {
   */
 
   main {
-    height: 100vh;
-  
-      
-    
     .landing {
       display: flex;
       justify-content: center;
@@ -169,8 +164,6 @@ body {
       align-items: center;
       height: 100vh;
       background-color: #7db9d1;
-   
-      
 
       img {
         max-width: 70%;
@@ -179,8 +172,8 @@ body {
           max-width: 30%;
         }
 
-        @include for-desktop-up{
-            max-width: 25%;
+        @include for-desktop-up {
+          max-width: 25%;
         }
 
         @include for-big-desktop-up {
@@ -197,8 +190,7 @@ body {
         color: map-get($colors, secondary);
         padding: 1rem;
 
-
-        p{
+        p {
           padding-bottom: 30px;
         }
         @include for-big-desktop-up {
@@ -206,7 +198,6 @@ body {
         }
 
         i {
-          
           font-size: 18px;
           color: white;
         }
@@ -218,159 +209,142 @@ body {
       justify-content: center;
       flex-direction: column;
       align-items: center;
-    
-      
-     
-     
-       .img-container{
+
+      .img-container {
         background-color: #292929;
-       width: 100%;
+        width: 100%;
         padding: 2rem;
         display: flex;
         justify-content: center;
         align-items: center;
-       
+
         img {
           max-width: 100%;
-         
+
           @include for-tablet-portrait-up {
             max-width: 90%;
           }
-      
+
           @include for-tablet-landscape-up {
             max-width: 45%;
           }
-         
         }
-      
-      
       }
-      
-     
-      
-
-
-    
 
       .about-content {
-        background-color: #7db9d1;
+        background-color: #fff7f0;
         padding: 1rem;
         h1 {
           font-family: "Anton";
-         text-transform: uppercase;
+          text-transform: uppercase;
           padding: 1rem;
+          border: 2px solid red;
+          font-weight: 400;
 
-          padding-bottom: 0;
-          padding-top: 0;
           letter-spacing: 2px;
-          color: #fff7f0;
-          text-align: left;
+          color: map-get($colors, secondary);
+          text-align: center;
           font-size: 36px;
           font-weight: 500;
-         
-         
-        
-          @include for-tablet-landscape-up{
-              text-align: left;
+
+          @include for-tablet-landscape-up {
+            text-align: left;
           }
-        
+
           @include for-big-desktop-up {
             font-size: 48px;
           }
         }
-     
-p{
-  font-family: "roboto";
-  font-weight: 400;
-  color: #1f1f1f;
-  text-align: left;
-  font-size: 12px;
-  line-height: 200%;
- width: 100%;
-  padding: 1rem;
-  padding-top: 0;
-  padding-bottom: 3rem;
-  
 
-  @include for-tablet-portrait-up {
-    padding: 5rem;
-    padding-top: 0;
-    padding-bottom: 0;
-    font-size: 16px;
-  }
+        p {
+          font-family: "roboto";
+          font-weight: 400;
+          color: #4b4b4b;
+          text-align: left;
+          font-size: 12px;
+          line-height: 200%;
+          width: 100%;
+          padding: 1rem;
+          padding-top: 0;
+          padding-bottom: 3rem;
 
-  @include for-tablet-landscape-up{
-      text-align: left;
-  }
+          @include for-tablet-portrait-up {
+            padding: 5rem;
+            padding-top: 0;
+            padding-bottom: 0;
+            font-size: 16px;
+          }
 
+          @include for-tablet-landscape-up {
+            text-align: left;
+          }
 
-  @include for-desktop-up {
-    font-size: 16px;
-   
-  }
+          @include for-desktop-up {
+            font-size: 16px;
+          }
 
- 
-  @include for-desktop-up {
-    font-size: 18px;
-    
-    
-  }
-}
+          @include for-desktop-up {
+            font-size: 18px;
+          }
+        }
       }
-      
     }
 
-    .rec{
+    .rec {
       display: flex;
       justify-content: center;
       flex-direction: column;
       align-items: center;
-      
-      background-color: #7db9d1;
-     
-      .img-container{
-       padding: 2rem;
+      border: 2px solid red;
+
+      .img-container {
+        padding: 2rem;
         background-color: rgb(253, 211, 159);
         width: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-        img{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
           position: relative;
           top: 32px;
           max-width: 100%;
-
-          
         }
       }
-    
-      .rec-content{
+
+      .rec-content {
         padding: 2rem;
-        background-color: #7db9d1;
-        height: 100%;
-        h1{
-          font-family: 'Anton';
+        background-color: #fff7f0;
+
+        h1 {
+          font-family: "Anton";
           font-size: 36px;
-          text-align: left;
-          color: #fff7f0;
+          text-align: center;
+          font-weight: 400;
+
+          padding: 1rem;
+          color: map-get($colors, secondary);
           letter-spacing: 2px;
         }
 
-        p{
-          font-size: 16px;
-          font-family: 'roboto';
+        p {
+          font-size: 18px;
+          font-family: "roboto";
           font-weight: 400;
           text-align: left;
           line-height: 200%;
           padding: 1rem;
-          padding-top: 0;
-          padding-left: 0;
-          padding-bottom: 3rem;
+          padding-bottom: 2rem;
           color: #1f1f1f;
         }
       }
-    
-     
     }
+  }
+}
+
+footer {
+  border: 2px solid red;
+
+  .copy {
+    height: 10px;
   }
 }
