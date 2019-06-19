@@ -40,6 +40,7 @@ FONTS
 */
 @import url("https://fonts.googleapis.com/css?family=Anton|Roboto:400,500|Shadows+Into+Light");
 @import url("https://fonts.googleapis.com/css?family=Staatliches&display=swap");
+@import url("https://fonts.googleapis.com/css?family=IBM+Plex+Sans:700&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -47,57 +48,63 @@ FONTS
 }
 
 body {
-  height: 100vh;
-  width: 100%;
   font-family: "roboto";
+  width: 100%;
+  height: 100vh;
+  margin: 0 !important;
 }
 header {
-  width: 100%;
-
   position: fixed;
-
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 3;
+  height: 70px;
+  background-color: map-get($colors, primary);
   .navbar {
-    font-size: 16px;
-    padding-bottom: 10px;
-    letter-spacing: 2px;
+    width: 100%;
+    display: flex;
+    padding-right: 20px;
+    align-items: center;
+    height: 70px;
 
-    .navbar-toggle {
-      padding: 2rem;
-      padding-top: 1rem;
-      position: absolute;
-      top: 10px;
-      right: 20px;
-      cursor: pointer;
-      color: map-get($colors, accent);
-      font-size: 24px;
+    @include for-tablet-landscape-up {
+      padding-right: 50px;
+    }
+    .logo {
+      flex-grow: 1;
+      padding-left: 20px;
 
-      @include for-big-desktop-up {
-        font-size: 36px;
-        padding-top: 1rem;
+      a {
+        font-family: "IBM Plex Sans";
+        color: transparent;
+        -webkit-text-stroke: 1px map-get($colors, accent);
+        letter-spacing: 3px;
+        font-size: 24px;
+        text-decoration: none;
       }
     }
-
     .main-nav {
-      list-style-type: none;
-
-      display: none;
-    }
-
-    .active {
       display: flex;
-      justify-content: center;
-      align-items: flex-start;
+      list-style-type: none;
     }
 
     .main-nav li {
+      letter-spacing: 1px;
+      font-size: 16px;
       text-align: center;
-      margin: 0 0 15px 15px;
+      margin: 0 0 0px 15px;
+      text-transform: uppercase;
+      @include for-tablet-landscape-up {
+        font-size: 24px;
+        margin: 0 0 0px 25px;
+      }
     }
 
     .nav-links {
       color: map-get($colors, secondary);
-      font-family: "Shadows Into Light";
-
+      font-family: "Shadows into light";
       position: relative;
       text-decoration: none;
     }
@@ -126,29 +133,6 @@ header {
       -webkit-transform: scaleX(1);
       transform: scaleX(1);
     }
-    /*
-      .logo {
-        padding: 1rem;
-        padding-bottom: 0;
-        color: map-get($colors, accent);
-        font-family: "Shadows into light";
-        font-size: 22px;
-        display: inline-block;
-        margin-top: 10px;
-        margin-left: 20px;
-        text-decoration: none;
-        transition: transform 0.4s ease;
-
-        @include for-big-desktop-up {
-          font-size: 48px;
-        }
-      }
-
-      .logo:hover {
-        transform: scale(1.3);
-      }
-
-      */
   }
 }
 
@@ -157,45 +141,40 @@ header {
   */
 
 main {
+  margin-top: 70px;
+
   .landing {
+    img {
+      max-width: 70%;
+    }
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    height: 100vh;
-    background-color: #7db9d1;
-
-    img {
-      max-width: 70%;
-
-      @include for-tablet-landscape-up {
-        max-width: 30%;
-      }
-
-      @include for-desktop-up {
-        max-width: 25%;
-      }
-
-      @include for-big-desktop-up {
-        max-width: 60%;
-      }
-    }
 
     .message {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+      background-color: map-get($colors, primary);
+      width: 100%;
       font-family: "Shadows into light";
       font-size: 12px;
       color: map-get($colors, secondary);
       padding: 1rem;
 
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
       p {
+        padding-top: 20px;
         padding-bottom: 30px;
+        @include for-tablet-landscape-up {
+          font-size: 16px;
+        }
+        @include for-big-desktop-up {
+          font-size: 18px;
+        }
       }
-      @include for-big-desktop-up {
-        font-size: 16px;
-      }
+
       a {
         color: white;
         i {
@@ -204,77 +183,86 @@ main {
         }
       }
     }
-  }
 
-  .about {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    background-color: #292929;
-    height: 70vh;
+    .aboutContent {
+      background-color: map-get($colors, accent);
+      height: 70vh;
 
-    .img-container {
-      background-color: #292929;
-      width: 100%;
-      padding: 1rem;
+      @include for-tablet-portrait-up {
+        height: 100vh;
+      }
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
+      width: 100%;
 
-      img {
-        max-width: 100%;
-
-        @include for-tablet-portrait-up {
-          max-width: 90%;
+      .img-container {
+        img {
+          max-width: 100%;
         }
+      }
 
-        @include for-tablet-landscape-up {
-          max-width: 45%;
+      .button_about {
+        margin-top: 30px;
+        a {
+          background-color: map-get($colors, secondary);
+          padding: 10px 35px 10px 35px;
+          color: map-get($colors, accent);
+          text-decoration: none;
+          font-family: "shadows into light";
+          border-radius: 5%;
+          font-size: 16px;
+          text-transform: uppercase;
+          &:hover {
+            background-color: map-get($colors, primary);
+            transition: background-color ease-in 0.3s;
+          }
+          @include for-tablet-landscape-up {
+            font-size: 18px;
+          }
         }
       }
     }
 
-    .about-button {
-      height: 80px;
-      width: 70%;
-      font-family: "Shadows into light";
-      background-color: map-get($colors, primary);
-      color: map-get($colors, secondary);
-      font-size: 24px;
-      letter-spacing: 2px;
-      border: none;
-      border-radius: 5%;
-    }
-  }
+    .story {
+      height: 70vh;
 
-  .rec {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    height: 70vh;
-    background-color: rgb(253, 211, 159);
-    .img-container {
-      padding: 2rem;
-      background-color: rgb(253, 211, 159);
+      @include for-tablet-portrait-up {
+        height: 100vh;
+      }
       width: 100%;
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
-      img {
-        max-width: 100%;
+      background-color: map-get($colors, secondary);
+      .img-container {
+        padding: 1rem;
+        img {
+          max-width: 100%;
+        }
       }
-    }
-
-    .button-2 {
-      width: 70%;
-      border: none;
-      border-radius: 5%;
-      font-family: "Shadows into light";
-      font-size: 24px;
-      height: 80px;
-      background-color: map-get($colors, primary);
+      .button_story {
+        margin-top: 30px;
+        a {
+          background-color: map-get($colors, cta);
+          padding: 10px 35px 10px 35px;
+          color: map-get($colors, accent);
+          text-decoration: none;
+          font-family: "shadows into light";
+          border-radius: 5%;
+          font-size: 16px;
+          text-transform: uppercase;
+          &:hover {
+            background-color: map-get($colors, primary);
+            transition: background-color ease-in 0.3s;
+          }
+          @include for-tablet-landscape-up {
+            font-size: 18px;
+          }
+        }
+      }
     }
   }
 }
