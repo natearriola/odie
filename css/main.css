@@ -143,10 +143,6 @@ main .landing {
           align-items: center;
 }
 
-main .landing img {
-  max-width: 70%;
-}
-
 main .landing .message {
   background-color: #7db9d1;
   width: 100%;
@@ -192,125 +188,181 @@ main .landing .message a i {
   color: white;
 }
 
-main .landing .aboutContent {
+main .landing .message img {
+  max-width: 70%;
+}
+
+main .landing .mainContent {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 70vh;
+}
+
+@media (min-width: 600px) {
+  main .landing .mainContent {
+    height: 100vh;
+  }
+}
+
+@media (min-width: 1200px) {
+  main .landing .mainContent {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+@media (min-width: 1200px) {
+  main .landing .mainContent .img-container {
+    width: 50%;
+  }
+}
+
+main .landing .mainContent .img-container img {
+  max-width: 100%;
+}
+
+@media (min-width: 900px) {
+  main .landing .mainContent .content .content {
+    width: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+main .landing .mainContent .content p {
+  visibility: hidden;
+}
+
+@media (min-width: 900px) {
+  main .landing .mainContent .content p {
+    visibility: visible;
+    font-size: 18px;
+    font-family: "saatlische";
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (min-width: 900px) {
+  main .landing .mainContent .content span {
+    font-family: "IBM plex sans";
+    color: transparent;
+    text-transform: uppercase;
+    font-size: 80px;
+    letter-spacing: 2px;
+    -webkit-text-stroke: 4px #7db9d1;
+  }
+}
+
+main .landing .button {
+  margin-top: 0;
+}
+
+@media (min-width: 900px) {
+  main .landing .button {
+    font-size: 18px;
+    margin-top: 50px;
+  }
+}
+
+main .landing .button .link {
+  background-color: #1f1f1f;
+  padding: 10px 25px 10px 25px;
+  color: #fff7f0;
+  text-decoration: none;
+  font-family: "shadows into light";
+  border-radius: 5%;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+main .landing .button .link:hover {
+  background-color: #7db9d1;
+  -webkit-transition: background-color ease-in 0.3s;
+  transition: background-color ease-in 0.3s;
+}
+
+@media (min-width: 900px) {
+  main .landing .button .link {
+    font-size: 18px;
+  }
+}
+
+.aboutContent {
   background-color: #fff7f0;
-  height: 70vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 100%;
 }
 
-@media (min-width: 600px) {
-  main .landing .aboutContent {
-    height: 100vh;
-  }
+.aboutContent p {
+  color: #1f1f1f;
 }
 
-main .landing .aboutContent .img-container img {
-  max-width: 100%;
-}
-
-main .landing .aboutContent .button_about {
-  margin-top: 30px;
-}
-
-main .landing .aboutContent .button_about a {
-  background-color: #1f1f1f;
-  padding: 10px 35px 10px 35px;
-  color: #fff7f0;
-  text-decoration: none;
-  font-family: "shadows into light";
-  border-radius: 5%;
-  font-size: 16px;
-  text-transform: uppercase;
-}
-
-main .landing .aboutContent .button_about a:hover {
-  background-color: #7db9d1;
-  -webkit-transition: background-color ease-in 0.3s;
-  transition: background-color ease-in 0.3s;
+.aboutContent .img-container {
+  padding: 0;
 }
 
 @media (min-width: 900px) {
-  main .landing .aboutContent .button_about a {
-    font-size: 18px;
+  .aboutContent .img-container {
+    padding: 5rem;
   }
 }
 
-main .landing .story {
-  height: 70vh;
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+@media (min-width: 1200px) {
+  .aboutContent .img-container {
+    padding: 0rem;
+  }
+}
+
+.story {
   background-color: #1f1f1f;
 }
 
-@media (min-width: 600px) {
-  main .landing .story {
-    height: 100vh;
-  }
+.story .img-container {
+  padding: 2rem;
 }
 
-main .landing .story .img-container {
-  padding: 1rem;
+.story .story-content p {
+  color: #fff7f0;
 }
 
-main .landing .story .img-container img {
-  max-width: 100%;
-}
-
-main .landing .story .button_story {
-  margin-top: 30px;
-}
-
-main .landing .story .button_story a {
+.story .story-content .button_story .link {
   background-color: #f25d07;
-  padding: 10px 35px 10px 35px;
   color: #fff7f0;
-  text-decoration: none;
-  font-family: "shadows into light";
-  border-radius: 5%;
-  font-size: 16px;
-  text-transform: uppercase;
 }
 
-main .landing .story .button_story a:hover {
+.story .story-content .button_story .link:hover {
   background-color: #7db9d1;
-  -webkit-transition: background-color ease-in 0.3s;
-  transition: background-color ease-in 0.3s;
-}
-
-@media (min-width: 900px) {
-  main .landing .story .button_story a {
-    font-size: 18px;
-  }
 }
 
 footer {
   background-color: #7db9d1;
-  height: 20vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
