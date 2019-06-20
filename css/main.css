@@ -124,7 +124,7 @@ header .navbar .nav-links:hover:before {
   MAIN CONTENT 
   */
 main {
-  margin-top: 70px;
+  margin-top: 20px;
 }
 
 main .landing {
@@ -144,6 +144,7 @@ main .landing {
 }
 
 main .landing .message {
+  height: 100vh;
   background-color: #7db9d1;
   width: 100%;
   font-family: "Shadows into light";
@@ -160,6 +161,9 @@ main .landing .message {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 main .landing .message p {
@@ -189,7 +193,13 @@ main .landing .message a i {
 }
 
 main .landing .message img {
-  max-width: 70%;
+  max-width: 100%;
+}
+
+@media (min-width: 900px) {
+  main .landing .message img {
+    max-width: 40%;
+  }
 }
 
 main .landing .mainContent {
@@ -228,6 +238,20 @@ main .landing .mainContent {
   }
 }
 
+@media (min-width: 900px) {
+  main .landing .mainContent .img-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
 @media (min-width: 1200px) {
   main .landing .mainContent .img-container {
     width: 50%;
@@ -236,6 +260,12 @@ main .landing .mainContent {
 
 main .landing .mainContent .img-container img {
   max-width: 100%;
+}
+
+@media (min-width: 900px) {
+  main .landing .mainContent .img-container img {
+    max-width: 70%;
+  }
 }
 
 @media (min-width: 900px) {
