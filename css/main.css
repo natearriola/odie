@@ -60,9 +60,9 @@ header .navbar .logo {
 header .navbar .logo a {
   font-family: "IBM Plex Sans";
   color: transparent;
+  font-size: 24px;
   -webkit-text-stroke: 1px #fff7f0;
   letter-spacing: 3px;
-  font-size: 24px;
   text-decoration: none;
 }
 
@@ -74,25 +74,30 @@ header .navbar .main-nav {
 }
 
 header .navbar .main-nav li {
-  letter-spacing: 1px;
-  font-size: 16px;
-  text-align: center;
   margin: 0 0 0px 15px;
-  text-transform: uppercase;
 }
 
 @media (min-width: 900px) {
   header .navbar .main-nav li {
-    font-size: 24px;
     margin: 0 0 0px 25px;
   }
 }
 
 header .navbar .nav-links {
+  letter-spacing: 1px;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 16px;
   color: #1f1f1f;
   font-family: "Shadows into light";
   position: relative;
   text-decoration: none;
+}
+
+@media (min-width: 900px) {
+  header .navbar .nav-links {
+    font-size: 24px;
+  }
 }
 
 header .navbar .nav-links:hover {
@@ -124,7 +129,7 @@ header .navbar .nav-links:hover:before {
   MAIN CONTENT 
   */
 main {
-  margin-top: 20px;
+  margin-top: 70px;
 }
 
 main .landing {
@@ -198,7 +203,7 @@ main .landing .message img {
 
 @media (min-width: 900px) {
   main .landing .message img {
-    max-width: 40%;
+    max-width: 30%;
   }
 }
 

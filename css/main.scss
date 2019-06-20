@@ -79,9 +79,9 @@ header {
       a {
         font-family: "IBM Plex Sans";
         color: transparent;
+        font-size: 24px;
         -webkit-text-stroke: 1px map-get($colors, accent);
         letter-spacing: 3px;
-        font-size: 24px;
         text-decoration: none;
       }
     }
@@ -91,18 +91,21 @@ header {
     }
 
     .main-nav li {
-      letter-spacing: 1px;
-      font-size: 16px;
-      text-align: center;
       margin: 0 0 0px 15px;
-      text-transform: uppercase;
+
       @include for-tablet-landscape-up {
-        font-size: 24px;
         margin: 0 0 0px 25px;
       }
     }
 
     .nav-links {
+      letter-spacing: 1px;
+      text-align: center;
+      text-transform: uppercase;
+      font-size: 16px;
+      @include for-tablet-landscape-up {
+        font-size: 24px;
+      }
       color: map-get($colors, secondary);
       font-family: "Shadows into light";
       position: relative;
@@ -141,7 +144,7 @@ header {
   */
 
 main {
-  margin-top: 20px;
+  margin-top: 70px;
   .landing {
     display: flex;
     justify-content: center;
@@ -183,7 +186,7 @@ main {
       img {
         max-width: 80%;
         @include for-tablet-landscape-up {
-          max-width: 40%;
+          max-width: 30%;
         }
       }
     }
