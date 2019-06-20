@@ -193,7 +193,7 @@ main .landing .message a i {
 }
 
 main .landing .message img {
-  max-width: 100%;
+  max-width: 80%;
 }
 
 @media (min-width: 900px) {
